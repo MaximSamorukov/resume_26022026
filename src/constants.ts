@@ -14,6 +14,9 @@ export const MENU = [
   {
     name: "projects",
   },
+  {
+    name: "contacts",
+  },
 ];
 
 export const EXPERIENCE = {
