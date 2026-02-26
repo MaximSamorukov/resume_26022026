@@ -1,7 +1,5 @@
+import { Menu } from "@/widgets/Menu";
+
 export function App() {
-  return (
-    <div>
-      dfdf
-    </div>
-  )
+  return <Menu />;
 }
