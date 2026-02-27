@@ -1,19 +1,22 @@
 import React from "react";
-import cn from "classnames";
 import { useActiveSection } from "@/utils/hooks/useActiveSection";
 import { MENU, PAGES } from "@/constants";
 import s from "./style.module.scss";
+import { MenuItem } from "@/components/Menu/MenuItem";
 const pages = Object.values(PAGES);
 export const Menu = () => {
-  const result = useActiveSection(pages);
-  console.log(result);
+  const { setActivePage, activeId } = useActiveSection(pages);
+
   return (
     <div className={s.container}>
       <div className={s.innerContainer}>
         {MENU.map((i) => (
-          <div className={cn(s.item, { [s.item_active]: i.name === result })}>
-            {i.name}
-          </div>
+          <MenuItem
+            title={i.name}
+            onSelect={setActivePage}
+            active={i.name === activeId}
+            slug={i.name}
+          />
         ))}
       </div>
     </div>
