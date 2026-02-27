@@ -15,7 +15,7 @@ export const Menu = () => {
             title={i.name}
             onSelect={setActivePage}
             active={i.name === activeId}
-            slug={i.name}
+            slug={i.slug}
           />
         ))}
       </div>

@@ -10,21 +10,27 @@ export const PAGES = {
 export const MENU = [
   {
     name: PAGES.ABOUT,
+    slug: PAGES.ABOUT,
   },
   {
     name: PAGES.EXPERIENCE,
+    slug: PAGES.EXPERIENCE,
   },
   {
     name: PAGES.EDUCATION,
+    slug: PAGES.EDUCATION,
   },
   {
     name: PAGES.COURSES,
+    slug: PAGES.COURSES,
   },
   {
     name: PAGES.PROJECTS,
+    slug: PAGES.PROJECTS,
   },
   {
     name: PAGES.CONTACTS,
+    slug: PAGES.CONTACTS,
   },
 ];
 
