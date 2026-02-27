@@ -10,6 +10,7 @@
   justify-content: center;
   border: 1px solid red;
   box-sizing: border-box;
+  background-color: #242424;
 }
 .innerContainer {
   width: 100%;
@@ -20,4 +21,11 @@
   justify-content: flex-end;
   gap: 20px;
   box-sizing: border-box;
+}
+
+.item {
+  font-weight: 400;
+  &_active {
+    font-weight: 700;
+  }
 }

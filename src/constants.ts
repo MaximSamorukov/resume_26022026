@@ -1,21 +1,30 @@
+export const PAGES = {
+  ABOUT: "about",
+  EXPERIENCE: "experience",
+  EDUCATION: "education",
+  COURSES: "courses",
+  PROJECTS: "projects",
+  CONTACTS: "contacts",
+} as const;
+
 export const MENU = [
   {
-    name: "about",
+    name: PAGES.ABOUT,
   },
   {
-    name: "experience",
+    name: PAGES.EXPERIENCE,
   },
   {
-    name: "education",
+    name: PAGES.EDUCATION,
   },
   {
-    name: "courses",
+    name: PAGES.COURSES,
   },
   {
-    name: "projects",
+    name: PAGES.PROJECTS,
   },
   {
-    name: "contacts",
+    name: PAGES.CONTACTS,
   },
 ];
 

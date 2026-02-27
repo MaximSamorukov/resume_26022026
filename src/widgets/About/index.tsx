@@ -1,8 +1,11 @@
-import React from 'react'
-import s from './style.module.scss';
+import React from "react";
+import s from "./style.module.scss";
+import { PAGES } from "@/constants";
 
 export const About = () => {
   return (
-    <div className={s.container}>about</div>
-  )
-}
+    <div id={PAGES.ABOUT} className={s.container}>
+      about
+    </div>
+  );
+};
