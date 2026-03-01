@@ -1,3 +1,6 @@
+@use "../../variables.scss" as variables;
+@use "sass:map";
+
 .container {
   position: fixed;
   top: 0;
@@ -10,7 +13,7 @@
   justify-content: center;
   border: 1px solid red;
   box-sizing: border-box;
-  background-color: #242424;
+  background-color: map.get(map.get(variables.$themes, dark), bg-color);
 }
 .innerContainer {
   width: 100%;
