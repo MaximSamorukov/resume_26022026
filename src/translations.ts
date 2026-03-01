@@ -9,7 +9,19 @@ export const t = {
       contacts: "Contacts",
     },
     about: {
-      main_text: "Hi! I'm a softwear engineer",
+      brief: {
+        name: "Maksim Samorukov",
+        occupation: "web developer",
+        moto: "I build intuitive UI/UX",
+      },
+      summary: {
+        first:
+          "Hi! I'm passionate about web development. I built my first website using MS FrontPage back in 2000.",
+        second:
+          "Today I build interfaces and logic using both React and vanilla JS (TS), I enjoy developing fullstack web applications and Telegram bots, and I explore the possibilities of AI to create functional and modern applications that meet the challenges of our time. Developing my own project — an application in the field of materials science that uses AI to improve the efficiency of welding technology development.",
+        third:
+          "I hold multiple higher education degrees, a PhD in Materials Science, and have completed numerous professional development courses. I love learning and exploring new things, tackling complex problems, and seeing them through to the end.",
+      },
     },
     courses: [
       {
@@ -280,7 +292,19 @@ export const t = {
       contacts: "Контакты",
     },
     about: {
-      main_text: "Привет! Я разработчик программного обеспечения",
+      brief: {
+        name: "Максим Саморуков",
+        occupation: "веб-разработчик",
+        moto: "строю удобный UX/UI",
+      },
+      summary: {
+        first:
+          "Привет! Я увлекаюсь веб-разработкой. Свой первый сайт собрал в конструкторе MS FrontPage в 2000 году.",
+        second:
+          "Сегодня я создаю интерфейсы и логику как с использованием React, так и на нативном JS (TS), увлекаюсь разработкой fullstack веб-приложений, Telegram-ботов, исследую возможности AI для получения функциональных и современных приложений, отвечающих вызовам времени. Развиваю собственный проект — приложение в области материаловедения, использующее AI для повышения эффективности разработки технологий сварки.",
+        third:
+          "У меня несколько высших образований, степень к.т.н. в области материаловедения и много курсов повышения квалификации за спиной. Мне нравится учиться и исследовать новое, решать сложные задачи и доводить дело до конца.",
+      },
     },
     courses: [
       {
@@ -541,4 +565,4 @@ export const t = {
       },
     ],
   },
-};
+} as const;

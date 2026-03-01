@@ -1,3 +1,6 @@
+@use "../../variables.scss" as variables;
+@use "sass:map";
+
 .container {
   width: 100%;
   width: 1000px;
@@ -6,6 +9,74 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: 1px solid red;
   border-radius: 20px;
+}
+
+.data {
+  width: 95%;
+  margin: 0 auto;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 30px;
+
+  &__brief {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  &__title {
+    font-size: 48px;
+    font-weight: 700;
+    width: 100%;
+    line-height: 48px;
+    margin-bottom: 20px;
+    color: rgb(226, 232, 240);
+  }
+  &__occupation {
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: rgb(226, 232, 240);
+  }
+  &__moto {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  &__socials {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+  }
+  &__socialItem {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    svg {
+      color: map.get(map.get(variables.$themes, dark), text-color);
+    }
+    &:hover {
+      svg {
+        color: map.get(map.get(variables.$themes, dark), text-hovered);
+      }
+    }
+  }
+
+  &__summary {
+    width: 100%;
+    height: fit-content;
+    padding: 0;
+    box-sizing: border-box;
+    padding-top: 5px;
+  }
 }

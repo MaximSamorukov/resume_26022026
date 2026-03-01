@@ -2,11 +2,13 @@ $themes: (
   light: (
     bg-color: #ffffff,
     text-color: #333333,
+    text-hovered: rgb(226, 232, 240),
     accent-color: #3498db,
   ),
   dark: (
     bg-color: rgba(15, 23, 42, 1),
     text-color: rgb(148, 163, 184),
+    text-hovered: rgb(226, 232, 240),
     accent-color: #5dade2,
   ),
 );
