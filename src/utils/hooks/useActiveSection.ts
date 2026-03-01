@@ -10,13 +10,26 @@ export const useActiveSection = (ids: string[]) => {
   const [activeId, setActiveId] = useState("");
   const timeoutRef = useRef<number | null>(null);
   const prevActiveIdRef = useRef("");
-  const [scrollTo, setScrollTo] = useState("");
 
-  const setActivePage = useCallback(
-    (id: string) => {
-      setScrollTo(id);
+  const setActivePage = useCallback((id: string) => {
+    if (!id || prevActiveIdRef.current === id) return;
+    prevActiveIdRef.current = id;
+    const el = document.getElementById(id);
+    if (!el) return;
+    const top = el.getBoundingClientRect().top + window.scrollY;
+    window.scrollTo({ top, behavior: "smooth" });
+  }, []);
+
+  const handleScroll = useCallback(
+    (e: Event) => {
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+      }
+      timeoutRef.current = setTimeout(() => {
+        setActivePage(activeId);
+      }, 150);
     },
-    [activeId, setScrollTo],
+    [activeId],
   );
 
   useLayoutEffect(() => {
@@ -46,28 +59,12 @@ export const useActiveSection = (ids: string[]) => {
     };
   }, [ids]);
 
-  useLayoutEffect(() => {
-    if (!scrollTo || prevActiveIdRef.current === scrollTo) return;
-    prevActiveIdRef.current = scrollTo;
-    const el = document.getElementById(scrollTo);
-    if (!el) return;
-    const top = el.getBoundingClientRect().top + window.scrollY;
-    window.scrollTo({ top, behavior: "smooth" });
-  }, [scrollTo]);
-
   useEffect(() => {
-    function handleScroll(e: Event) {
-      if (timeoutRef.current) {
-        clearTimeout(timeoutRef.current);
-      }
-      timeoutRef.current = setTimeout(() => {
-        setActivePage(activeId);
-      }, 50);
-    }
     document.addEventListener("scroll", handleScroll);
     return () => {
       document.removeEventListener("scroll", handleScroll);
     };
-  }, [activeId, setActivePage]);
+  }, [handleScroll]);
+
   return { activeId, setActivePage };
 };

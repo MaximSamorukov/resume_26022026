@@ -4,6 +4,7 @@ import { MENU, PAGES } from "@/constants";
 import s from "./style.module.scss";
 import { MenuItem } from "@/components/Menu/MenuItem";
 const pages = Object.values(PAGES);
+
 export const Menu = () => {
   const { setActivePage, activeId } = useActiveSection(pages);
 
