@@ -150,6 +150,16 @@ export const t = {
           "documentation in Confluence, Yandex;",
         ],
       },
+      {
+        company: "NRC 'Kurchatov institute', FSUE 'VIAM'",
+        active: true,
+        title: "Engineer developer",
+        start: "01.09.2008",
+        end: "01.09.2020",
+        description: [
+          "development of aviation field material science technologies",
+        ],
+      },
     ],
     education: [
       {
@@ -430,6 +440,16 @@ export const t = {
           "интеграция интерфейсов с api сервера;",
           "система контроля версий git;",
           "документация и задачи в jira, confluence, Yandex;",
+        ],
+      },
+      {
+        company: "НИЦ 'Курчатовский институт', ФГУП 'ВИАМ'",
+        active: true,
+        title: "Инженер-исследователь",
+        start: "01.09.2008",
+        end: "01.09.2020",
+        description: [
+          "разработка технологий в области авиационного материаловедения",
         ],
       },
     ],
