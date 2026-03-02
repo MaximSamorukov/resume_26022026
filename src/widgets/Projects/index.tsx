@@ -30,55 +30,61 @@ export const Projects = () => {
       const type = i.type;
       const currentData = acc[type];
       const nextData = [...currentData, i];
-      // @ts-ignore
-      acc[type] = nextData;
-      return acc;
+      const newAcc = Object.assign({ ...acc }, { [type]: nextData });
+      return newAcc;
     }, init);
     return data;
   }, [c.t.projects]);
+  console.log(project, widget, testTask);
   return (
     <div id={PAGES.PROJECTS} className={s.container}>
       <div className={s.data}>
         <div className={s.data__title}>{c.t.pageTitle.projects}</div>
-        {project.map((i) => (
-          <ProjectItem
-            key={i.title}
-            title={i.title}
-            type={i.type}
-            description={i.description}
-            github={i.github}
-            deploy={i.deploy}
-            stack={i.stack}
-          />
-        ))}
+        <div className={s.data__items}>
+          {project.map((i) => (
+            <ProjectItem
+              key={i.title}
+              title={i.title}
+              type={i.type}
+              description={i.description}
+              github={i.github}
+              deploy={i.deploy}
+              stack={i.stack}
+            />
+          ))}
+        </div>
       </div>
       <div className={s.data}>
-        <div className={s.data__title}>{c.t.pageTitle.projects}</div>
-        {widget.map((i) => (
-          <ProjectItem
-            key={i.title}
-            title={i.title}
-            type={i.type}
-            description={i.description}
-            github={i.github}
-            deploy={i.deploy}
-            stack={i.stack}
-          />
-        ))}
+        <div className={s.data__title}>{c.t.pageTitle.widgets}</div>
+        <div className={s.data__items}>
+          {widget.map((i) => (
+            <ProjectItem
+              key={i.title}
+              title={i.title}
+              type={i.type}
+              description={i.description}
+              github={i.github}
+              deploy={i.deploy}
+              stack={i.stack}
+            />
+          ))}
+        </div>
       </div>
       <div className={s.data}>
-        <div className={s.data__title}>{c.t.pageTitle.projects}</div>
-        {testTask.map((i) => (
-          <ProjectItem
-            key={i.title}
-            title={i.title}
-            type={i.type}
-            description={i.description}
-            github={i.github}
-            deploy={i.deploy}
-            stack={i.stack}
-          />
-        ))}
+        <div className={s.data__title}>{c.t.pageTitle.testTasks}</div>
+        <div className={s.data__items}>
+          {testTask.map((i) => (
+            <ProjectItem
+              key={i.title}
+              title={i.title}
+              type={i.type}
+              description={i.description}
+              github={i.github}
+              deploy={i.deploy}
+              stack={i.stack}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );

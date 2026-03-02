@@ -1,0 +1,18 @@
+@use "../../../variables.scss" as var;
+@use "sass:map";
+.item {
+  width: fit-content;
+  height: 20px;
+  display: flex;
+  padding-right: 3px;
+  padding-left: 3px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  background-color: rgba(18, 109, 0, 0.2);
+  border: 1px solid rgb(16, 141, 0);
+  font-size: 10px;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
