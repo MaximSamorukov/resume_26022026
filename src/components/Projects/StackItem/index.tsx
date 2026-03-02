@@ -1,4 +1,3 @@
-import type { ProjectItemType } from "@/widgets/Projects";
 import s from "./style.module.scss";
 
 type StackItemProps = {

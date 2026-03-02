@@ -7,11 +7,9 @@ import { StackItem } from "../StackItem";
 type ProjectItemProps = ProjectItemType;
 
 export const ProjectItem = ({
-  type,
   title,
   github,
   deploy,
-  description,
   stack,
 }: ProjectItemProps) => {
   return (
