@@ -33,6 +33,7 @@ export const TranslationProvider = ({
     [language],
   );
   return (
+    // @ts-ignore
     <TranslationsContext value={currentData}>{children}</TranslationsContext>
   );
 };

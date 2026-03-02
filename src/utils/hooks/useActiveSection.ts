@@ -20,17 +20,14 @@ export const useActiveSection = (ids: string[]) => {
     window.scrollTo({ top, behavior: "smooth" });
   }, []);
 
-  const handleScroll = useCallback(
-    (e: Event) => {
-      if (timeoutRef.current) {
-        clearTimeout(timeoutRef.current);
-      }
-      timeoutRef.current = setTimeout(() => {
-        setActivePage(activeId);
-      }, 150);
-    },
-    [activeId],
-  );
+  const handleScroll = useCallback(() => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
+    timeoutRef.current = setTimeout(() => {
+      setActivePage(activeId);
+    }, 150);
+  }, [activeId]);
 
   useLayoutEffect(() => {
     const observer = new IntersectionObserver(

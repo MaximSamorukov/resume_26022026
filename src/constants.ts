@@ -21,10 +21,6 @@ export const MENU = [
     slug: PAGES.EDUCATION,
   },
   {
-    name: PAGES.COURSES,
-    slug: PAGES.COURSES,
-  },
-  {
     name: PAGES.PROJECTS,
     slug: PAGES.PROJECTS,
   },

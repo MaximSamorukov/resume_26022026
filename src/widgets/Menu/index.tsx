@@ -1,4 +1,3 @@
-import React from "react";
 import { useActiveSection } from "@/utils/hooks/useActiveSection";
 import { MENU, PAGES } from "@/constants";
 import s from "./style.module.scss";

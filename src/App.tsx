@@ -4,7 +4,6 @@ import { Contacts } from "@/widgets/Contacts";
 import { Experience } from "@/widgets/Experience";
 import { Education } from "@/widgets/Education";
 import { Projects } from "@/widgets/Projects";
-import { Courses } from "@/widgets/Courses";
 
 export function App() {
   return (
@@ -13,7 +12,6 @@ export function App() {
       <About />
       <Experience />
       <Education />
-      <Courses />
       <Projects />
       <Contacts />
     </>

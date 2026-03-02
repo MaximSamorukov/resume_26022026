@@ -3,7 +3,7 @@ export const t = {
     pageTitle: {
       about: "About me",
       experience: "Experience",
-      education: "Education",
+      education: "High education",
       courses: "Courses",
       projects: "Projects",
       contacts: "Contacts",
@@ -174,11 +174,13 @@ export const t = {
         name: "Moscow State Technical University N.E.Bauman",
         speciality: "Material Science",
         degree: "engineer developer",
+        icon: "bmstu.svg",
       },
       {
         name: "Moscow State Technical University N.E.Bauman",
         speciality: "Enterprise economics",
         degree: "engineer economist",
+        icon: "bmstu.svg",
       },
       {
         name: "NRC «Kurchatov institute» – VIAM",
@@ -304,7 +306,7 @@ export const t = {
     pageTitle: {
       about: "Обо мне",
       experience: "Опыт работы",
-      education: "Образование",
+      education: "Высшее образование",
       courses: "Курсы",
       projects: "Проекты",
       contacts: "Контакты",
