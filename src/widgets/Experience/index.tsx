@@ -8,6 +8,7 @@ export const Experience = () => {
   return (
     <div id={PAGES.EXPERIENCE} className={s.container}>
       <div className={s.data}>
+        <div className={s.data__title}>{c.t.pageTitle.experience}</div>
         {c.t.experience.map((i) => (
           <ExperienceItem
             company={i.company}

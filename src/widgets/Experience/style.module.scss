@@ -1,3 +1,6 @@
+@use "../../variables.scss" as var;
+@use "sass:map";
+
 .container {
   width: 100%;
   width: 1000px;
@@ -17,4 +20,11 @@
   align-items: center;
   justify-content: flex-start;
   gap: 30px;
+
+  &__title {
+    width: fit-content;
+    align-self: flex-start;
+    font-size: 32px;
+    color: map.get(map.get(var.$themes, dark), text-color);
+  }
 }

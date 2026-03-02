@@ -1,5 +1,13 @@
 export const t = {
   en: {
+    pageTitle: {
+      about: "About me",
+      experience: "Experience",
+      education: "Education",
+      courses: "Courses",
+      projects: "Projects",
+      contacts: "Contacts",
+    },
     menu: {
       about: "About me",
       experience: "Experience",
@@ -20,7 +28,7 @@ export const t = {
         second:
           "Today I build interfaces and logic using both React and vanilla JS (TS), I enjoy developing fullstack web applications and Telegram bots, and I explore the possibilities of AI to create functional and modern applications that meet the challenges of our time. Developing my own project — an application in the field of materials science that uses AI to improve the efficiency of welding technology development.",
         third:
-          "I hold multiple higher education degrees, a PhD in Materials Science, and have completed numerous professional development courses. I love learning and exploring new things, tackling complex problems, and seeing them through to the end.",
+          'I hold a higher engineering degree and a PhD in Materials Science, and have completed numerous professional development courses from Hexlet, HTML Academy, RSSchool, Stepik, and the "Specialist" Training Center. I enjoy learning and exploring new things, tackling complex problems, and seeing them through to the end.',
       },
     },
     courses: [
@@ -293,6 +301,14 @@ export const t = {
     ],
   },
   ru: {
+    pageTitle: {
+      about: "Обо мне",
+      experience: "Опыт работы",
+      education: "Образование",
+      courses: "Курсы",
+      projects: "Проекты",
+      contacts: "Контакты",
+    },
     menu: {
       about: "Обо мне",
       experience: "Опыт",
@@ -313,7 +329,7 @@ export const t = {
         second:
           "Сегодня я создаю интерфейсы и логику как с использованием React, так и на нативном JS (TS), увлекаюсь разработкой fullstack веб-приложений, Telegram-ботов, исследую возможности AI для получения функциональных и современных приложений, отвечающих вызовам времени. Развиваю собственный проект — приложение в области материаловедения, использующее AI для повышения эффективности разработки технологий сварки.",
         third:
-          "У меня несколько высших образований, степень к.т.н. в области материаловедения и много курсов повышения квалификации за спиной. Мне нравится учиться и исследовать новое, решать сложные задачи и доводить дело до конца.",
+          "У меня высшее инженерное образование, степень к.т.н. в области материаловедения и много курсов повышения квалификации за спиной от Хекслет, HTML Академии, RSSchool, Stepik, УЦ “Специалист”. Мне нравится учиться и исследовать новое, решать сложные задачи и доводить дело до конца.",
       },
     },
     courses: [
