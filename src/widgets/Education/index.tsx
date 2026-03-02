@@ -23,9 +23,9 @@ export const Education = () => {
       <div className={s.data}>
         <div className={s.data__title}>{c.t.pageTitle.courses}</div>
         <div className={s.data__courses}>
-          {c.t.courses.map((i) => (
+          {c.t.courses.map((i, index) => (
             <CourseItem
-              key={i.name}
+              key={`${i.name}_${index}`}
               name={i.name}
               school={i.school}
               icon={i.type}

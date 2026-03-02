@@ -25,7 +25,9 @@ export const ExperienceItem = ({
         <div className={s.main__title}>{title}</div>
         <div className={s.main__description}>
           {description.map((ii) => (
-            <div className={s.main__descriptionItem}>{ii}</div>
+            <div key={ii} className={s.main__descriptionItem}>
+              {ii}
+            </div>
           ))}
         </div>
       </div>

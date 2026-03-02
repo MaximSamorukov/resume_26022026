@@ -11,6 +11,7 @@ export const Experience = () => {
         <div className={s.data__title}>{c.t.pageTitle.experience}</div>
         {c.t.experience.map((i) => (
           <ExperienceItem
+            key={i.company}
             company={i.company}
             title={i.title}
             start={i.start}

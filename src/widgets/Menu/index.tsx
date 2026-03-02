@@ -13,6 +13,7 @@ export const Menu = () => {
       <div className={s.innerContainer}>
         {MENU.map((i) => (
           <MenuItem
+            key={i.slug}
             title={c.t.menu[i.name]}
             onSelect={setActivePage}
             active={i.name === activeId}
