@@ -308,6 +308,15 @@ export const t = {
         stack: ["TS", "React 19", "SASS"],
       },
     ],
+    contacts: {
+      telegram: "https://t.me/M_Camopykoff",
+      telegramName: "@M_Camopykoff",
+      linkedin: "https://www.linkedin.com/in/maxim-samorukov",
+      github: "https://github.com/MaximSamorukov",
+      email: "maxim.samorukov@gmail.com",
+      phone: "+7(925)026 17 37",
+      tel: "tel:+79250261737",
+    },
     common: {
       page: {
         projects: {
@@ -626,6 +635,15 @@ export const t = {
         stack: ["TS", "React 19", "SASS"],
       },
     ],
+    contacts: {
+      telegram: "https://t.me/M_Camopykoff",
+      telegramName: "@M_Camopykoff",
+      linkedin: "https://www.linkedin.com/in/maxim-samorukov",
+      github: "https://github.com/MaximSamorukov",
+      email: "maxim.samorukov@gmail.com",
+      phone: "+7(925)026 17 37",
+      tel: "tel:+79250261737",
+    },
     common: {
       page: {
         projects: {
