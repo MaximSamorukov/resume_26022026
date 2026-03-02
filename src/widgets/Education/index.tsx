@@ -1,7 +1,5 @@
-//import React from "react";
 import { HighEducationItem } from "@/components/Education/HighEducation/HighEducationItem";
 import s from "./style.module.scss";
-//import viamLogo from "../../assets/viam.png";
 import { PAGES } from "@/constants";
 import { useTranslation } from "@/providers/translations";
 import { CourseItem } from "@/components/Education/Courses/CourseItem";

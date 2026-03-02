@@ -14,6 +14,7 @@
   border: 1px solid red;
   box-sizing: border-box;
   background-color: map.get(map.get(variables.$themes, dark), bg-color);
+  z-index: 100;
 }
 .innerContainer {
   width: 100%;

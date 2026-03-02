@@ -191,6 +191,7 @@ export const t = {
     ],
     projects: [
       {
+        type: "project",
         title: "Next.js application with client and admin parts.",
         description: "Next.js application with client and admin parts.",
         github: "https://github.com/MaximSamorukov/3d-studio",
@@ -209,6 +210,7 @@ export const t = {
         ],
       },
       {
+        type: "testTask",
         title: "Test task 1. Page with historical facts.",
         description: "Test task 1. Page with historical facts.",
         github: "https://github.com/MaximSamorukov/test_only",
@@ -216,6 +218,7 @@ export const t = {
         stack: ["React 19", "TS", "GSAP", "SASS"],
       },
       {
+        type: "testTask",
         title:
           "Test task 2. Todo application with rendering optimized using the profiler.",
         description:
@@ -225,6 +228,7 @@ export const t = {
         stack: ["React 19", "TS", "Zustand", "SASS"],
       },
       {
+        type: "testTask",
         title:
           "Test task 3. Course catalog page. Entire layout built with vanilla JS (SPA) without React. Includes filtering functionality and responsive design.",
         description:
@@ -234,6 +238,7 @@ export const t = {
         stack: ["JS", "MobX", "SASS"],
       },
       {
+        type: "testTask",
         title:
           "Test task 4. Currency exchanger form, built without a Figma mockup based on a JPEG reference, with responsive design. UI is based on heavily customized Material UI components. Interface buttons are not functional.",
         description:
@@ -243,6 +248,7 @@ export const t = {
         stack: ["TS", "React 19", "SASS", "Material UI"],
       },
       {
+        type: "testTask",
         title:
           "Test task 5. Todo application with filtering, drag-and-drop manual sorting, localStorage state persistence, and the ability to edit existing tasks.",
         description:
@@ -252,6 +258,7 @@ export const t = {
         stack: ["TS", "React 19", "Redux Toolkit", "SASS", "@dnd-kit"],
       },
       {
+        type: "testTask",
         title:
           "Test task 6. A non-responsive product catalog interface using the DummyJSON public API for authentication and fetching products.",
         description:
@@ -270,6 +277,7 @@ export const t = {
         ],
       },
       {
+        type: "testTask",
         title:
           "Test task 7. An application for saving and restoring graph state (all nodes and connections between them) on page reload. The graph should be saved automatically or by user action, so that it is restored in the same state after refreshing the page.",
         description:
@@ -288,6 +296,7 @@ export const t = {
         ],
       },
       {
+        type: "widget",
         title: "Widget. Animated multi-button with submenu.",
         description: "Widget. Animated multi-button with submenu.",
         github: "https://github.com/MaximSamorukov/widget_multi_button",
@@ -295,6 +304,7 @@ export const t = {
         stack: ["TS", "React 19", "RxJS", "SASS"],
       },
       {
+        type: "widget",
         title: "Widget. Plastic window cost calculator.",
         description: "Widget. Plastic window cost calculator.",
         github: "https://github.com/MaximSamorukov/window_calculator_mini_app",
@@ -494,6 +504,7 @@ export const t = {
     ],
     projects: [
       {
+        type: "project",
         title: "Next.js приложение с клиентской и административной частями.",
         description:
           "Next.js приложение с клиентской и административной частями.",
@@ -513,6 +524,7 @@ export const t = {
         ],
       },
       {
+        type: "testTask",
         title: "Тестовое 1. Страница с историческими фактами.",
         description: "Тестовое 1. Страница с историческими фактами.",
         github: "https://github.com/MaximSamorukov/test_only",
@@ -520,6 +532,7 @@ export const t = {
         stack: ["React 19", "TS", "GSAP", "SASS"],
       },
       {
+        type: "testTask",
         title:
           "Тестовое 2. Todo приложение с оптимизированным с помощью профайлера рендерингом.",
         description:
@@ -529,6 +542,7 @@ export const t = {
         stack: ["React 19", "TS", "Zustand", "SASS"],
       },
       {
+        type: "testTask",
         title:
           "Тестовое 3. Страница каталога курсов. Вся верстка сделана на чистом JS (SPA) без использования React. Добавлен функционал фильтрации. Обеспечена адаптивность.",
         description:
@@ -538,6 +552,7 @@ export const t = {
         stack: ["JS", "MobX", "SASS"],
       },
       {
+        type: "testTask",
         title:
           "Тестовое 4. Форма валютного обменника, сверстанная без Figma макета на основании jpeg, с адаптивностью. Используемый UI - значительно кастомизированные Material UI компоненты.",
         description:
@@ -547,6 +562,7 @@ export const t = {
         stack: ["TS", "React 19", "SASS", "Material UI"],
       },
       {
+        type: "testTask",
         title:
           "Тестовое 5. Todo приложение с функционалами фильтрации, ручной сортировки методом перетаскивания, сохранением состояния в localStorage и возможностью редактирования существующих задач.",
         description:
@@ -556,6 +572,7 @@ export const t = {
         stack: ["TS", "React 19", "Redux Toolkit", "SASS", "@dnd-kit"],
       },
       {
+        type: "testTask",
         title:
           "Тестовое 6. Приложение представляет собой неадаптивный интерфейс для работы с каталогом товаров, использующий публичное API DummyJSON для аутентификации и для получения товаров.",
         description:
@@ -574,6 +591,7 @@ export const t = {
         ],
       },
       {
+        type: "testTask",
         title:
           "Тестовое 7. Приложение для реализации возможности сохранять состояние графа (все элементы и связи между ними), а также загружать его при повторном открытии страницы. Граф должен сохраняться автоматически или по действию пользователя, чтобы после обновления страницы он восстанавливался в том же виде.",
         description:
@@ -592,6 +610,7 @@ export const t = {
         ],
       },
       {
+        type: "widget",
         title: "Виджет. Мультикнопка с подменю анимированная",
         description: "Виджет. Мультикнопка с подменю анимированная",
         github: "https://github.com/MaximSamorukov/widget_multi_button",
@@ -599,6 +618,7 @@ export const t = {
         stack: ["TS", "React 19", "RxJS", "SASS"],
       },
       {
+        type: "widget",
         title: "Виджет. Калькулятор стоимости пластиковых окон",
         description: "Виджет. Калькулятор стоимости пластиковых окон",
         github: "https://github.com/MaximSamorukov/window_calculator_mini_app",
