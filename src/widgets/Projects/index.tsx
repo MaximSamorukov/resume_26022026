@@ -35,15 +35,15 @@ export const Projects = () => {
     }, init);
     return data;
   }, [c.t.projects]);
-  console.log(project, widget, testTask);
+
   return (
     <div id={PAGES.PROJECTS} className={s.container}>
       <div className={s.data}>
         <div className={s.data__title}>{c.t.pageTitle.projects}</div>
         <div className={s.data__items}>
-          {project.map((i) => (
+          {project.map((i, index) => (
             <ProjectItem
-              key={i.title}
+              key={`${i.title}_${index}`}
               title={i.title}
               type={i.type}
               description={i.description}
@@ -57,9 +57,9 @@ export const Projects = () => {
       <div className={s.data}>
         <div className={s.data__title}>{c.t.pageTitle.widgets}</div>
         <div className={s.data__items}>
-          {widget.map((i) => (
+          {widget.map((i, index) => (
             <ProjectItem
-              key={i.title}
+              key={`${i.title}_${index}`}
               title={i.title}
               type={i.type}
               description={i.description}
@@ -72,10 +72,13 @@ export const Projects = () => {
       </div>
       <div className={s.data}>
         <div className={s.data__title}>{c.t.pageTitle.testTasks}</div>
+        <div className={s.data__disclaimer}>
+          {c.t.common.page.projects.testTasksDisclaimer}
+        </div>
         <div className={s.data__items}>
-          {testTask.map((i) => (
+          {testTask.map((i, index) => (
             <ProjectItem
-              key={i.title}
+              key={`${i.title}_${index}`}
               title={i.title}
               type={i.type}
               description={i.description}

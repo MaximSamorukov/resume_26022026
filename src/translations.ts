@@ -308,6 +308,14 @@ export const t = {
         stack: ["TS", "React 19", "SASS"],
       },
     ],
+    common: {
+      page: {
+        projects: {
+          testTasksDisclaimer:
+            "The applications have limited functionality. Some lack responsive design. They were developed as test assignments during the job application process in accordance with the provided specifications.",
+        },
+      },
+    },
   },
   ru: {
     pageTitle: {
@@ -618,5 +626,13 @@ export const t = {
         stack: ["TS", "React 19", "SASS"],
       },
     ],
+    common: {
+      page: {
+        projects: {
+          testTasksDisclaimer:
+            "Приложения обладают ограниченной функциональностью. В некоторых отсутствует адаптив. Были реализованы как тестовые задания в процессе трудоустройства в соответствии с ТЗ.",
+        },
+      },
+    },
   },
 } as const;

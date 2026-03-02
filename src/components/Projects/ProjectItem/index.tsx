@@ -1,4 +1,6 @@
 import type { ProjectItemType } from "@/widgets/Projects";
+import GHIcon from "@/assets/gh.svg?react";
+import DeployIcon from "@/assets/deploy.svg?react";
 import s from "./style.module.scss";
 import { StackItem } from "../StackItem";
 
@@ -16,14 +18,18 @@ export const ProjectItem = ({
     <div className={s.item}>
       <div className={s.item__title}>{title}</div>
       <div className={s.item__stack}>
-        {stack.map((i) => (
-          <StackItem name={i} />
+        {stack.map((i, index) => (
+          <StackItem key={`${i}_${index}`} name={i} />
         ))}
       </div>
-      {/*<div className={s.item__name}>{description}</div>*/}
-      {/*<div className={s.item__name}>{deploy}</div>
-      <div className={s.item__name}>{github}</div>
-      <div className={s.item__name}>{stack.join("-")}</div>*/}
+      <div className={s.item__links}>
+        <a target="_blank" rel="noopener noreferrer" href={github}>
+          <GHIcon />
+        </a>
+        <a target="_blank" rel="noopener noreferrer" href={deploy}>
+          <DeployIcon />
+        </a>
+      </div>
     </div>
   );
 };
