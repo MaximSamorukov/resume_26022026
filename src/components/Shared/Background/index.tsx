@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import s from "./style.module.scss";
 export const Background = () => {
   const ref = useRef<HTMLDivElement | null>(null);
