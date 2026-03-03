@@ -12,6 +12,7 @@ export const Experience = () => {
         {c.t.experience.map((i) => (
           <ExperienceItem
             key={i.company}
+            stack={i.stack}
             company={i.company}
             title={i.title}
             start={i.start}
