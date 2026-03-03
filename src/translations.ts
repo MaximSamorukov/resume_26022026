@@ -21,16 +21,16 @@ export const t = {
     about: {
       brief: {
         name: "Maksim Samorukov",
-        occupation: "web developer",
+        occupation: "frontend developer",
         moto: "I build intuitive UI/UX",
       },
       summary: {
         first:
-          "Hi! I'm passionate about web development. I built my first website using MS FrontPage back in 2000.",
+          "Hi! I'm a <span class='accent'>frontend developer</span> with an engineering background.",
         second:
-          "Today I build interfaces and logic using both React and vanilla JS (TS), I enjoy developing fullstack web applications and Telegram bots, and I explore the possibilities of AI to create functional and modern applications that meet the challenges of our time. Developing my own project — an application in the field of materials science that uses AI to improve the efficiency of welding technology development.",
+          "I build modern web interfaces with <span class='accent'>React</span> and <span class='accent'>TypeScript</span>, develop <span class='accent'>fullstack applications</span> and <span class='accent'>Telegram bots</span>. Building my own SaaS product using AI to optimize welding technology development.",
         third:
-          'I hold a higher engineering degree and a PhD in Materials Science, and have completed numerous professional development courses from Hexlet, HTML Academy, RSSchool, Stepik, and the "Specialist" Training Center. I enjoy learning and exploring new things, tackling complex problems, and seeing them through to the end.',
+          "The combination of a PhD in materials science, an engineering background, and web development experience allows me to thoroughly understand the subject domain for <span class='accent'>effective problem-solving</span>.",
       },
     },
     courses: [
@@ -357,16 +357,16 @@ export const t = {
     about: {
       brief: {
         name: "Максим Саморуков",
-        occupation: "веб-разработчик",
+        occupation: "фронтенд-разработчик",
         moto: "строю удобный UX/UI",
       },
       summary: {
         first:
-          "Привет! Я увлекаюсь веб-разработкой. Свой первый сайт собрал в конструкторе MS FrontPage в 2000 году.",
+          "Привет! Я <span class='accent'>фронтенд-разработчик</span> с инженерным бэкграундом.",
         second:
-          "Сегодня я создаю интерфейсы и логику как с использованием React, так и на нативном JS (TS), увлекаюсь разработкой fullstack веб-приложений, Telegram-ботов, исследую возможности AI для получения функциональных и современных приложений, отвечающих вызовам времени. Развиваю собственный проект — приложение в области материаловедения, использующее AI для повышения эффективности разработки технологий сварки.",
+          "Создаю современные веб-интерфейсы на <span class='accent'>React</span> и <span class='accent'>TypeScript</span>, разрабатываю <span class='accent'>фуллстэк-приложения</span> и <span class='accent'>Telegram-ботов</span>. Развиваю собственный SaaS-продукт с использованием AI для оптимизации разработки технологий сварки.",
         third:
-          "У меня высшее инженерное образование, степень к.т.н. в области материаловедения и много курсов повышения квалификации за спиной от Хекслет, HTML Академии, RSSchool, Stepik, УЦ “Специалист”. Мне нравится учиться и исследовать новое, решать сложные задачи и доводить дело до конца.",
+          "Сочетание степени к.т.н. в материаловедении, инженерного бэкграунда и опыта в веб-разработке позволяет комплексно оценивать предметную область для <span class='accent'>эффективного решения задач</span>.",
       },
     },
     courses: [

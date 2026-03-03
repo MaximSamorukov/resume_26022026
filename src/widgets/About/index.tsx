@@ -33,13 +33,15 @@ export const About = () => {
           <DownloadResumeBtn />
         </div>
         <div className={s.data__summary}>
-          <span>{c.t.about.summary.first}</span>
+          <span dangerouslySetInnerHTML={{ __html: c.t.about.summary.first }} />
           <br />
           <br />
-          <span>{c.t.about.summary.second}</span>
+          <span
+            dangerouslySetInnerHTML={{ __html: c.t.about.summary.second }}
+          />
           <br />
           <br />
-          <span>{c.t.about.summary.third}</span>
+          <span dangerouslySetInnerHTML={{ __html: c.t.about.summary.third }} />
         </div>
       </div>
     </div>

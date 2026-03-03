@@ -39,25 +39,11 @@ export const Projects = () => {
   return (
     <div id={PAGES.PROJECTS} className={s.container}>
       <div className={s.data}>
-        <div className={s.data__title}>{c.t.pageTitle.projects}</div>
+        <div
+          className={s.data__title}
+        >{`${c.t.pageTitle.projects} и ${c.t.pageTitle.widgets}`}</div>
         <div className={s.data__items}>
-          {project.map((i, index) => (
-            <ProjectItem
-              key={`${i.title}_${index}`}
-              title={i.title}
-              type={i.type}
-              description={i.description}
-              github={i.github}
-              deploy={i.deploy}
-              stack={i.stack}
-            />
-          ))}
-        </div>
-      </div>
-      <div className={s.data}>
-        <div className={s.data__title}>{c.t.pageTitle.widgets}</div>
-        <div className={s.data__items}>
-          {widget.map((i, index) => (
+          {[...project, ...widget].map((i, index) => (
             <ProjectItem
               key={`${i.title}_${index}`}
               title={i.title}
