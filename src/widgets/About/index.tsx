@@ -5,6 +5,7 @@ import TelegramIcon from "@/assets/tg.svg?react";
 import s from "./style.module.scss";
 import { PAGES } from "@/constants";
 import { useTranslation } from "@/providers/translations";
+import { DownloadResumeBtn } from "@/components/About/DownloadResumeBtn";
 
 export const About = () => {
   const c = useTranslation();
@@ -29,6 +30,7 @@ export const About = () => {
               <TelegramIcon />
             </div>
           </div>
+          <DownloadResumeBtn />
         </div>
         <div className={s.data__summary}>
           <span>{c.t.about.summary.first}</span>
