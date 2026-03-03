@@ -1,0 +1,24 @@
+@use "../../../variables.scss" as *;
+
+.container {
+  width: 120px;
+  height: fit-content;
+  position: fixed;
+  top: 250px;
+  left: 250px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 8px 8px;
+  z-index: -1;
+  transform: rotate(45deg);
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  background-color: $BASE_ACCENT;
+  border-radius: 50%;
+}
