@@ -18,7 +18,6 @@
   height: 100vh;
   width: 100vw;
   z-index: -99;
-  //background-color: $BASE_BACKGROUND;
   background: radial-gradient(
     circle at var(--mouse-x) var(--mouse-y),
     rgba($BASE_BACKGROUND, 0.5) 2px,
