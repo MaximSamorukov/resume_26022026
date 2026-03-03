@@ -1,4 +1,4 @@
-@use "../../../../variables.scss" as var;
+@use "../../../../variables.scss" as *;
 @use "sass:map";
 .container {
   width: 100%;
@@ -12,16 +12,10 @@
   padding-top: 10px;
   padding-bottom: 10px;
   border-radius: 15px;
-  background-color: rgba(
-    map.get(map.get(var.$themes, dark), text-hovered),
-    0.1
-  );
+  background-color: rgba($BASE_LIGHT, 0.1);
   position: relative;
   &:hover {
-    background-color: rgba(
-      map.get(map.get(var.$themes, dark), text-hovered),
-      0.15
-    );
+    background-color: rgba($BASE_LIGHT, 0.15);
   }
   &::after {
     position: absolute;
@@ -30,10 +24,7 @@
     height: 70px;
     top: 5px;
     left: 62px;
-    background-color: rgba(
-      map.get(map.get(var.$themes, dark), text-hovered),
-      0.1
-    );
+    background-color: rgba($BASE_LIGHT, 0.1);
   }
 }
 
@@ -58,7 +49,7 @@
 
   &__school {
     width: fit-content;
-    color: map.get(map.get(var.$themes, dark), text-hovered);
+    color: $BASE_LIGHT;
     font-weight: 600;
     font-size: 20px;
     line-height: 22px;

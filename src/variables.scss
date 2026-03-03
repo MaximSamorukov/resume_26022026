@@ -1,3 +1,5 @@
+@use "sass:map";
+
 $themes: (
   light: (
     bg-color: #ffffff,
@@ -9,6 +11,11 @@ $themes: (
     bg-color: rgba(15, 23, 42, 1),
     text-color: rgb(148, 163, 184),
     text-hovered: rgb(226, 232, 240),
-    accent-color: #5dade2,
+    accent-color: rgb(94, 234, 212),
   ),
 );
+
+$BASE_LIGHT: map.get(map.get($themes, dark), text-hovered);
+$BASE_GREY: map.get(map.get($themes, dark), text-color);
+$BASE_ACCENT: map.get(map.get($themes, dark), accent-color);
+$BASE_BACKGROUND: map.get(map.get($themes, dark), bg-color);

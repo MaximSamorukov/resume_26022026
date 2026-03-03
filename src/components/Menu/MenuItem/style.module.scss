@@ -1,4 +1,4 @@
-@use "../../../variables.scss" as variables;
+@use "../../../variables.scss" as *;
 @use "sass:map";
 .container {
   width: fit-content;
@@ -14,9 +14,9 @@
   font-weight: 300;
   &_active {
     font-weight: 500;
-    color: map.get(map.get(variables.$themes, dark), text-hovered);
+    color: $BASE_LIGHT;
   }
   &:hover {
-    color: map.get(map.get(variables.$themes, dark), text-hovered);
+    color: $BASE_LIGHT;
   }
 }

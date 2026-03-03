@@ -1,4 +1,4 @@
-@use "../../../variables.scss" as var;
+@use "../../../variables.scss" as *;
 @use "sass:map";
 .item {
   width: 100%;
@@ -13,19 +13,13 @@
   padding-bottom: 10px;
   border-radius: 15px;
   position: relative;
-  background-color: rgba(
-    map.get(map.get(var.$themes, dark), text-hovered),
-    0.1
-  );
+  background-color: rgba($BASE_LIGHT, 0.1);
   &:hover {
-    background-color: rgba(
-      map.get(map.get(var.$themes, dark), text-hovered),
-      0.15
-    );
+    background-color: rgba($BASE_LIGHT, 0.15);
   }
   &__title {
     width: fit-content;
-    color: map.get(map.get(var.$themes, dark), text-hovered);
+    color: $BASE_LIGHT;
     font-size: 16px;
     line-height: 20px;
     box-sizing: border-box;
@@ -45,11 +39,11 @@
     box-sizing: border-box;
     padding-top: 10px;
     svg {
-      color: map.get(map.get(var.$themes, dark), text-color);
+      color: $BASE_GREY;
       width: 20px;
       height: 20px;
       &:hover {
-        color: map.get(map.get(var.$themes, dark), text-hovered);
+        color: $BASE_LIGHT;
       }
     }
   }

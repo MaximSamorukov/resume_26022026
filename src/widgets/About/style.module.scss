@@ -1,4 +1,4 @@
-@use "../../variables.scss" as variables;
+@use "../../variables.scss" as *;
 @use "sass:map";
 
 .container {
@@ -63,11 +63,11 @@
     justify-content: center;
     align-items: center;
     svg {
-      color: map.get(map.get(variables.$themes, dark), text-color);
+      color: $BASE_GREY;
     }
     &:hover {
       svg {
-        color: map.get(map.get(variables.$themes, dark), text-hovered);
+        color: $BASE_LIGHT;
       }
     }
   }

@@ -1,4 +1,4 @@
-@use "../../../variables.scss" as var;
+@use "../../../variables.scss" as *;
 @use "sass:map";
 .container {
   width: 100%;
@@ -36,7 +36,7 @@
     justify-content: flex-start;
     gap: 10px;
     font-size: 16px;
-    color: map.get(map.get(var.$themes, dark), text-hovered);
+    color: $BASE_LIGHT;
     font-weight: 600;
   }
 

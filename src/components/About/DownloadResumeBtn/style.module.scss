@@ -1,11 +1,11 @@
-@use "../../../variables.scss" as variables;
+@use "../../../variables.scss" as *;
 @use "sass:map";
 .container {
   width: 215px;
   height: fit-content;
   padding: 8px 30px;
-  color: map.get(map.get(variables.$themes, dark), text-color);
-  border: 3px solid map.get(map.get(variables.$themes, dark), text-color);
+  color: $BASE_GREY;
+  border: 3px solid $BASE_GREY;
   font-size: 16px;
   font-weight: 600;
   display: flex;
@@ -15,7 +15,7 @@
   border-radius: 10px;
 
   &:hover {
-    color: map.get(map.get(variables.$themes, dark), text-hovered);
-    border: 3px solid map.get(map.get(variables.$themes, dark), text-hovered);
+    color: $BASE_LIGHT;
+    border: 3px solid $BASE_LIGHT;
   }
 }
