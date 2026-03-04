@@ -1,4 +1,5 @@
 import { useTranslation } from "@/providers/translations";
+import resume from "@/assets/resume/Резюме_frontend_Саморуков.pdf";
 import s from "./style.module.scss";
 import { PAGES } from "@/constants";
 
@@ -46,6 +47,12 @@ export const Contacts = () => {
           <div className={s.data__contactItem}>
             <span>Phone:</span>
             <a href={c.t.contacts.tel}>{c.t.contacts.phone}</a>
+          </div>
+          <div className={s.data__contactItem}>
+            <span>Resume:</span>
+            <a href={resume} download="Резюме_frontend_Саморуков.pdf">
+              {c.t.common.page.contacts.download}
+            </a>
           </div>
         </div>
       </div>

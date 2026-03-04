@@ -328,6 +328,9 @@ export const t = {
     },
     common: {
       page: {
+        contacts: {
+          download: "download",
+        },
         projects: {
           testTasksDisclaimer:
             "The applications have limited functionality. Some lack responsive design. They were developed as test assignments during the job application process in accordance with the provided specifications.",
@@ -665,6 +668,9 @@ export const t = {
     },
     common: {
       page: {
+        contacts: {
+          download: "скачать",
+        },
         projects: {
           testTasksDisclaimer:
             "Приложения обладают ограниченной функциональностью. В некоторых отсутствует адаптив. Были реализованы как тестовые задания в процессе трудоустройства в соответствии с ТЗ.",

@@ -1,3 +1,4 @@
+import { useMediaQuery } from "@uidotdev/usehooks";
 import { Menu } from "@/widgets/Menu";
 import { About } from "@/widgets/About";
 import { Contacts } from "@/widgets/Contacts";
@@ -8,6 +9,10 @@ import { AccentBox } from "./components/Shared/AccentBox";
 import { Background } from "./components/Shared/Background";
 
 export function App() {
+  const less680px = useMediaQuery("(max-width: 680px)");
+  const top = less680px ? "80px" : "250px";
+  const left = less680px ? "50px" : "250px";
+
   return (
     <>
       <Menu />
@@ -16,13 +21,7 @@ export function App() {
       <Education />
       <Projects />
       <Contacts />
-      <AccentBox
-        count={90}
-        width={10}
-        top={"250px"}
-        rotate={45}
-        left={"250px"}
-      />
+      <AccentBox count={90} width={10} top={top} rotate={45} left={left} />
       <AccentBox
         count={100}
         width={4}
