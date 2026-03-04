@@ -330,6 +330,7 @@ export const t = {
       page: {
         contacts: {
           download: "download",
+          resumeName: "Resume_frontend_Samorukov.pdf",
         },
         projects: {
           testTasksDisclaimer:
@@ -670,6 +671,7 @@ export const t = {
       page: {
         contacts: {
           download: "скачать",
+          resumeName: "Резюме_frontend_Саморуков.pdf",
         },
         projects: {
           testTasksDisclaimer:

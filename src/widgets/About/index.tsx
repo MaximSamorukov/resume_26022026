@@ -1,5 +1,5 @@
 import GitHubIcon from "@/assets/gh.svg?react";
-import InstaIcon from "@/assets/insta.svg?react";
+import EmailIcon from "@/assets/email.svg?react";
 import LinkedInIcon from "@/assets/ln.svg?react";
 import TelegramIcon from "@/assets/tg.svg?react";
 import { useMediaQuery } from "@uidotdev/usehooks";
@@ -39,18 +39,36 @@ export const About = () => {
           </div>
           <div className={s.data__brief}>
             <div className={s.data__socials}>
-              <div className={s.data__socialItem}>
+              <a
+                href={c.t.contacts.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={s.data__socialItem}
+              >
                 <GitHubIcon />
-              </div>
-              <div className={s.data__socialItem}>
+              </a>
+              <a
+                href={c.t.contacts.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={s.data__socialItem}
+              >
                 <LinkedInIcon />
-              </div>
-              <div className={s.data__socialItem}>
-                <InstaIcon />
-              </div>
-              <div className={s.data__socialItem}>
+              </a>
+              <a
+                href={`mailto:${c.t.contacts.email}`}
+                className={s.data__socialItem}
+              >
+                <EmailIcon />
+              </a>
+              <a
+                href={c.t.contacts.telegram}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={s.data__socialItem}
+              >
                 <TelegramIcon />
-              </div>
+              </a>
             </div>
             <DownloadResumeBtn />
           </div>
@@ -66,18 +84,36 @@ export const About = () => {
           <div className={s.data__occupation}>{c.t.about.brief.occupation}</div>
           <div className={s.data__moto}>{c.t.about.brief.moto}</div>
           <div className={s.data__socials}>
-            <div className={s.data__socialItem}>
+            <a
+              href={c.t.contacts.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={s.data__socialItem}
+            >
               <GitHubIcon />
-            </div>
-            <div className={s.data__socialItem}>
+            </a>
+            <a
+              href={c.t.contacts.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={s.data__socialItem}
+            >
               <LinkedInIcon />
-            </div>
-            <div className={s.data__socialItem}>
-              <InstaIcon />
-            </div>
-            <div className={s.data__socialItem}>
+            </a>
+            <a
+              href={`mailto:${c.t.contacts.email}`}
+              className={s.data__socialItem}
+            >
+              <EmailIcon />
+            </a>
+            <a
+              href={c.t.contacts.telegram}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={s.data__socialItem}
+            >
               <TelegramIcon />
-            </div>
+            </a>
           </div>
           <DownloadResumeBtn />
         </div>
