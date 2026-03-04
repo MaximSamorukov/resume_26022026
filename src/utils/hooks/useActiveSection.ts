@@ -1,3 +1,4 @@
+import { useMediaQuery } from "@uidotdev/usehooks";
 import {
   useCallback,
   useEffect,
@@ -8,17 +9,23 @@ import {
 
 export const useActiveSection = (ids: string[]) => {
   const [activeId, setActiveId] = useState("");
+  const less690px = useMediaQuery("(max-width: 690px)");
   const timeoutRef = useRef<number | null>(null);
   const prevActiveIdRef = useRef("");
 
-  const setActivePage = useCallback((id: string) => {
-    if (!id || prevActiveIdRef.current === id) return;
-    prevActiveIdRef.current = id;
-    const el = document.getElementById(id);
-    if (!el) return;
-    const top = el.getBoundingClientRect().top + window.scrollY;
-    window.scrollTo({ top, behavior: "smooth" });
-  }, []);
+  const setActivePage = useCallback(
+    (id: string) => {
+      if (!id || prevActiveIdRef.current === id) return;
+      prevActiveIdRef.current = id;
+      const el = document.getElementById(id);
+      if (!el) return;
+      const top = el.getBoundingClientRect().top + window.scrollY;
+      if (!less690px) {
+        window.scrollTo({ top, behavior: "smooth" });
+      }
+    },
+    [less690px],
+  );
 
   const handleScroll = useCallback(() => {
     if (timeoutRef.current) {
