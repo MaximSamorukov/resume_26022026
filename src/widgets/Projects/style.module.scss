@@ -16,6 +16,9 @@
     width: 100%;
     height: fit-content;
   }
+  @media (max-width: 690px) {
+    height: fit-content;
+  }
 }
 
 .data {

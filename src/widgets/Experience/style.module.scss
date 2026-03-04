@@ -13,6 +13,9 @@
   @media (max-width: 980px) {
     width: 100%;
   }
+  @media (max-width: 690px) {
+    height: fit-content;
+  }
 }
 
 .data {
