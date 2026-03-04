@@ -9,13 +9,18 @@
   justify-content: flex-start;
   flex-wrap: wrap;
   gap: 8px 8px;
-  z-index: -1;
+  z-index: 10;
   transform: rotate(var(--rotate, 0deg));
+  &:hover {
+    .dot {
+      background-color: $BASE_ACCENT;
+    }
+  }
 }
 
 .dot {
   width: 6px;
   height: 6px;
-  background-color: $BASE_ACCENT;
+  background-color: rgba($BASE_ACCENT, 0.2);
   border-radius: 50%;
 }

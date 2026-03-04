@@ -11,7 +11,6 @@ export const Background = () => {
       if (ref.current) {
         const x = e.clientX;
         const y = e.clientY;
-        console.log(x, y);
         ref.current.style.setProperty("--mouse-x", `${x}px`);
         ref.current.style.setProperty("--mouse-y", `${y}px`);
       }
