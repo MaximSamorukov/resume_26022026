@@ -16,7 +16,27 @@ export function App() {
       <Education />
       <Projects />
       <Contacts />
-      <AccentBox />
+      <AccentBox
+        count={90}
+        width={10}
+        top={"250px"}
+        rotate={45}
+        left={"250px"}
+      />
+      <AccentBox
+        count={100}
+        width={4}
+        top={"150px"}
+        rotate={45}
+        right={"30%"}
+      />
+      <AccentBox
+        count={25}
+        width={5}
+        bottom={"50px"}
+        rotate={0}
+        right={"40%"}
+      />
       <Background />
     </>
   );
