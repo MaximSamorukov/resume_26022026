@@ -2,6 +2,7 @@ import GitHubIcon from "@/assets/gh.svg?react";
 import InstaIcon from "@/assets/insta.svg?react";
 import LinkedInIcon from "@/assets/ln.svg?react";
 import TelegramIcon from "@/assets/tg.svg?react";
+import { useMediaQuery } from "@uidotdev/usehooks";
 import s from "./style.module.scss";
 import { PAGES } from "@/constants";
 import { useTranslation } from "@/providers/translations";
@@ -9,6 +10,55 @@ import { DownloadResumeBtn } from "@/components/About/DownloadResumeBtn";
 
 export const About = () => {
   const c = useTranslation();
+  const less980px = useMediaQuery("(max-width: 980px)");
+  console.log(less980px);
+  if (less980px) {
+    return (
+      <div id={PAGES.ABOUT} className={s.container}>
+        <div className={s.data}>
+          <div className={s.data__brief}>
+            <div className={s.data__title}>{c.t.about.brief.name}</div>
+            <div className={s.data__occupation}>
+              {c.t.about.brief.occupation}
+            </div>
+            <div className={s.data__moto}>{c.t.about.brief.moto}</div>
+          </div>
+          <div className={s.data__summary}>
+            <span
+              dangerouslySetInnerHTML={{ __html: c.t.about.summary.first }}
+            />
+            <br />
+            <br />
+            <span
+              dangerouslySetInnerHTML={{ __html: c.t.about.summary.second }}
+            />
+            <br />
+            <br />
+            <span
+              dangerouslySetInnerHTML={{ __html: c.t.about.summary.third }}
+            />
+          </div>
+          <div className={s.data__brief}>
+            <div className={s.data__socials}>
+              <div className={s.data__socialItem}>
+                <GitHubIcon />
+              </div>
+              <div className={s.data__socialItem}>
+                <LinkedInIcon />
+              </div>
+              <div className={s.data__socialItem}>
+                <InstaIcon />
+              </div>
+              <div className={s.data__socialItem}>
+                <TelegramIcon />
+              </div>
+            </div>
+            <DownloadResumeBtn />
+          </div>
+        </div>
+      </div>
+    );
+  }
   return (
     <div id={PAGES.ABOUT} className={s.container}>
       <div className={s.data}>

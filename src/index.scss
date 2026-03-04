@@ -40,6 +40,9 @@ body {
   align-items: center;
   justify-content: flex-start;
   box-sizing: border-box;
+  @media (max-width: 980px) {
+    width: 100%;
+  }
 }
 
 .accent {
