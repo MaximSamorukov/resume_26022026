@@ -1,5 +1,5 @@
 @use "../../../variables.scss" as *;
-@use "sass:map";
+
 .container {
   width: 100%;
   height: fit-content;
@@ -55,5 +55,41 @@
     justify-content: flex-start;
     flex-wrap: wrap;
     gap: 5px 8px;
+  }
+}
+
+@media (max-width: 980px) {
+  .container {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 20px;
+
+    &__header {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+    &__dates {
+      width: 170px;
+      min-width: 170px;
+      font-size: 12px;
+      height: fit-content;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+    &__company {
+      font-size: 16px;
+      color: $BASE_LIGHT;
+      font-weight: 600;
+      text-align: right;
+    }
   }
 }

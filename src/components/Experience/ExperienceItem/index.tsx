@@ -1,4 +1,6 @@
 import { StackItem } from "../StackItem";
+import { useMediaQuery } from "@uidotdev/usehooks";
+
 import s from "./style.module.scss";
 
 type ExperienceItemProps = {
@@ -18,6 +20,34 @@ export const ExperienceItem = ({
   description,
   stack,
 }: ExperienceItemProps) => {
+  const less980px = useMediaQuery("(max-width: 980px)");
+  if (less980px) {
+    return (
+      <div className={s.container}>
+        <div className={s.container__header}>
+          <div className={s.container__dates}>{`${start} - ${end}`}</div>
+          <div className={s.container__company}>{company}</div>
+        </div>
+        <div className={s.mainData}>
+          <div className={s.mainData__header}>
+            <div className={s.mainData__title}>{title}</div>
+          </div>
+          <div className={s.mainData__description}>
+            {description.map((ii) => (
+              <div key={ii} className={s.mainData__descriptionItem}>
+                {ii}
+              </div>
+            ))}
+          </div>
+          <div className={s.mainData__stack}>
+            {stack.map((i) => (
+              <StackItem key={i} name={i} />
+            ))}
+          </div>
+        </div>
+      </div>
+    );
+  }
   return (
     <div className={s.container}>
       <div className={s.dates}>{`${start} - ${end}`}</div>

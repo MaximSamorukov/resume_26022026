@@ -11,7 +11,6 @@ import { DownloadResumeBtn } from "@/components/About/DownloadResumeBtn";
 export const About = () => {
   const c = useTranslation();
   const less980px = useMediaQuery("(max-width: 980px)");
-  console.log(less980px);
   if (less980px) {
     return (
       <div id={PAGES.ABOUT} className={s.container}>
