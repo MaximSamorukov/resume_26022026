@@ -46,8 +46,8 @@
   }
   &__contactItem {
     display: flex;
+    width: 100%;
     height: 30px;
-    display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
@@ -64,7 +64,14 @@
       text-decoration: none;
       color: inherit;
       width: 100%;
-      white-space: wrap;
+      display: block;
+      word-break: break-all;
+    }
+    @media (max-width: 500px) {
+      height: fit-content;
+      a {
+        height: fit-content;
+      }
     }
   }
 }
