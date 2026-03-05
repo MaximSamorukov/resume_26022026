@@ -19,5 +19,5 @@ export const Background = () => {
     window.addEventListener("mousemove", handleMouseMove);
     return () => window.removeEventListener("mousemove", handleMouseMove);
   }, []);
-  return <div ref={ref} className={s.container} />;
+  return <div id="background" ref={ref} className={s.container} />;
 };
