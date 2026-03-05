@@ -19,3 +19,17 @@ $BASE_LIGHT: map.get(map.get($themes, dark), text-hovered);
 $BASE_GREY: map.get(map.get($themes, dark), text-color);
 $BASE_ACCENT: map.get(map.get($themes, dark), accent-color);
 $BASE_BACKGROUND: map.get(map.get($themes, dark), bg-color);
+
+$FZ_12: 12px;
+$FZ_14: 14px;
+$FZ_16: 16px;
+$FZ_18: 18px;
+$FZ_20: 20px;
+$FZ_22: 22px;
+$FZ_32: 32px;
+$FZ_48: 48px;
+
+$FW_300: 300;
+$FW_400: 400;
+$FW_600: 600;
+$FW_700: 700;

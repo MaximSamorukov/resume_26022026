@@ -58,13 +58,14 @@
   &__school {
     width: fit-content;
     color: $BASE_LIGHT;
-    font-weight: 600;
-    font-size: 20px;
+    font-weight: $FW_400;
+    font-size: $FZ_20;
     line-height: 22px;
   }
   &__name {
     width: fit-content;
-    font-size: 14px;
+    font-size: $FZ_14;
+    font-weight: $FW_300;
     line-height: 16px;
   }
 }

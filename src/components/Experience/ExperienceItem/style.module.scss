@@ -11,9 +11,10 @@
 }
 
 .dates {
-  width: 170px;
-  min-width: 170px;
-  font-size: 12px;
+  width: 210px;
+  min-width: 210px;
+  font-size: $FZ_16;
+  font-weight: 300;
   height: fit-content;
   display: flex;
   flex-direction: column;
@@ -35,14 +36,15 @@
     align-items: center;
     justify-content: flex-start;
     gap: 10px;
-    font-size: 16px;
+    font-size: $FZ_16;
     color: $BASE_LIGHT;
-    font-weight: 600;
+    font-weight: $FW_600;
   }
 
   &__description {
     width: 100%;
-    font-size: 14px;
+    font-size: $FZ_16;
+    font-weight: $FW_300;
   }
   &__descriptionItem {
     width: 100%;
@@ -76,9 +78,10 @@
       justify-content: space-between;
     }
     &__dates {
-      width: 170px;
-      min-width: 170px;
-      font-size: 12px;
+      width: 210px;
+      min-width: 210px;
+      font-size: $FZ_16;
+      font-weight: $FW_300;
       height: fit-content;
       display: flex;
       flex-direction: column;
@@ -86,7 +89,7 @@
       justify-content: flex-start;
     }
     &__company {
-      font-size: 16px;
+      font-size: $FZ_16;
       color: $BASE_LIGHT;
       font-weight: 600;
       text-align: right;

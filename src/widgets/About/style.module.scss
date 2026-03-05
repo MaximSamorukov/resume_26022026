@@ -31,19 +31,19 @@
     gap: 10px;
   }
   &__title {
-    font-size: 48px;
-    font-weight: 700;
+    font-size: $FZ_48;
+    font-weight: $FW_700;
     width: 100%;
     line-height: 48px;
     color: rgb(226, 232, 240);
   }
   &__occupation {
-    font-size: 22px;
-    font-weight: 500;
+    font-size: $FZ_22;
+    font-weight: $FW_600;
     color: rgb(226, 232, 240);
   }
   &__moto {
-    font-size: 20px;
+    font-size: $FZ_20;
   }
   &__socials {
     width: 100%;
@@ -109,19 +109,19 @@
       gap: 10px;
     }
     &__title {
-      font-size: 48px;
-      font-weight: 700;
+      font-size: $FZ_48;
+      font-weight: $FW_700;
       width: 100%;
       line-height: 48px;
       color: rgb(226, 232, 240);
     }
     &__occupation {
-      font-size: 22px;
-      font-weight: 500;
+      font-size: $FZ_22;
+      font-weight: $FW_600;
       color: rgb(226, 232, 240);
     }
     &__moto {
-      font-size: 20px;
+      font-size: $FZ_20;
     }
     &__socials {
       width: 100%;
@@ -154,7 +154,8 @@
       padding: 0;
       box-sizing: border-box;
       padding-top: 5px;
-      font-weight: 300;
+      font-weight: $FW_300;
+      font-size: $FZ_16;
       white-space: wrap;
     }
   }

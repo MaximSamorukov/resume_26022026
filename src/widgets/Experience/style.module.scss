@@ -31,7 +31,7 @@
   &__title {
     width: fit-content;
     align-self: flex-start;
-    font-size: 32px;
+    font-size: $FZ_32;
     color: $BASE_GREY;
   }
   @media (max-width: 980px) {

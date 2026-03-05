@@ -1,5 +1,5 @@
 @use "../../../variables.scss" as *;
-@use "sass:map";
+
 .item {
   width: 100%;
   max-width: 300px;
@@ -13,6 +13,7 @@
   padding-bottom: 10px;
   border-radius: 15px;
   position: relative;
+  cursor: default;
   background-color: rgba($BASE_LIGHT, 0.1);
   &:hover {
     background-color: rgba($BASE_LIGHT, 0.15);
@@ -28,7 +29,8 @@
   &__title {
     width: fit-content;
     color: $BASE_LIGHT;
-    font-size: 16px;
+    font-size: $FZ_16;
+    font-weight: $FW_300;
     line-height: 20px;
     box-sizing: border-box;
     padding-right: 30px;
@@ -54,11 +56,6 @@
         color: $BASE_LIGHT;
       }
     }
-  }
-  &__name {
-    width: fit-content;
-    font-size: 14px;
-    line-height: 16px;
   }
   &__stack {
     display: flex;

@@ -25,16 +25,15 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  gap: 5px;
 
   &__title {
     width: fit-content;
     align-self: flex-start;
-    font-size: 32px;
+    font-size: $FZ_32;
     color: $BASE_GREY;
   }
   &__contacts {
-    width: 70%;
+    width: fit-content;
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -53,5 +52,16 @@
     align-items: center;
     justify-content: flex-start;
     gap: 10px;
+    span {
+      display: inline-block;
+      min-width: 100px;
+    }
+
+    a {
+      font-size: $FZ_16;
+      font-weight: $FW_300;
+      text-decoration: none;
+      color: inherit;
+    }
   }
 }

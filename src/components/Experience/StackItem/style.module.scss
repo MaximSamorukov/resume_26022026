@@ -1,5 +1,5 @@
-@use "../../../variables.scss" as var;
-@use "sass:map";
+@use "../../../variables.scss" as *;
+
 .item {
   width: fit-content;
   height: 20px;
@@ -12,7 +12,7 @@
   box-sizing: border-box;
   background-color: rgba(18, 109, 0, 0.2);
   border: 1px solid rgb(16, 141, 0);
-  font-size: 10px;
+  font-size: $FZ_12;
   box-sizing: border-box;
   border-radius: 5px;
 }

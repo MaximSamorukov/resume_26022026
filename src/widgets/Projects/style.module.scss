@@ -34,13 +34,13 @@
   &__title {
     width: fit-content;
     align-self: flex-start;
-    font-size: 32px;
+    font-size: $FZ_32;
     color: $BASE_GREY;
   }
   &__disclaimer {
     width: 100%;
     white-space: wrap;
-    font-size: 12px;
+    font-size: $FZ_12;
   }
   &__items {
     width: 100%;
