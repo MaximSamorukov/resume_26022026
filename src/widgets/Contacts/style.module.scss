@@ -41,7 +41,7 @@
     justify-content: center;
     gap: 20px;
     @media (max-width: 450px) {
-      width: 100%;
+      width: 90%;
     }
   }
   &__contactItem {
@@ -55,6 +55,7 @@
     span {
       display: inline-block;
       min-width: 100px;
+      width: 100px;
     }
 
     a {
@@ -62,6 +63,8 @@
       font-weight: $FW_300;
       text-decoration: none;
       color: inherit;
+      width: 100%;
+      white-space: wrap;
     }
   }
 }
