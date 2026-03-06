@@ -10,6 +10,7 @@ import React, {
 const data = {
   language: "ru",
   setCurrentLanguage: Function.prototype,
+  toggleLanguage: Function.prototype,
   t: t["ru"],
 };
 const TranslationsContext = createContext(data);
@@ -24,10 +25,19 @@ export const TranslationProvider = ({
     (arg: "ru" | "en") => setLanguage(arg),
     [],
   );
+  const toggleLanguage = useCallback(
+    () =>
+      setLanguage((arg) => {
+        if (arg === "en") return "ru";
+        return "en";
+      }),
+    [],
+  );
   const currentData = useMemo(
     () => ({
       language,
       setCurrentLanguage,
+      toggleLanguage,
       t: t[language],
     }),
     [language],

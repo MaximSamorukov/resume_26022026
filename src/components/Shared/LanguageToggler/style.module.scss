@@ -1,0 +1,46 @@
+@use "../../../variables.scss" as *;
+@use "sass:math";
+
+$PADDING: 2px;
+$CONT_WIDTH: 42px;
+$CONT_HEIGHT: 26px;
+$POINTER_SIZE: $CONT_HEIGHT - $PADDING * 2;
+$TRANSLATE: $CONT_WIDTH - $PADDING - $CONT_HEIGHT;
+.container {
+  width: fit-content;
+  height: $CONT_HEIGHT;
+  width: $CONT_WIDTH;
+  border: 1px solid $BASE_GREY;
+  border-radius: math.div($CONT_HEIGHT, 2);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: $PADDING;
+}
+
+.pointer {
+  all: unset;
+  cursor: pointer;
+  height: $POINTER_SIZE;
+  width: $POINTER_SIZE;
+  border-radius: 50%;
+  box-sizing: border-box;
+  border: 1px solid $BASE_GREY;
+  font-size: $FZ_12;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $BASE_LIGHT;
+  box-sizing: border-box;
+
+  &__en {
+    transform: translateX($TRANSLATE);
+    transition: all 0.3s ease-in-out;
+  }
+  &__ru {
+    transform: translateX(0);
+    transition: all 0.3s ease-in-out;
+  }
+}

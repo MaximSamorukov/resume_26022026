@@ -3,6 +3,7 @@ import { MENU, PAGES } from "@/constants";
 import s from "./style.module.scss";
 import { MenuItem } from "@/components/Menu/MenuItem";
 import { useTranslation } from "@/providers/translations";
+import { LanguageToggler } from "@/components/Shared/LanguageToggler";
 const pages = Object.values(PAGES);
 
 export const Menu = () => {
@@ -20,6 +21,7 @@ export const Menu = () => {
             slug={i.slug}
           />
         ))}
+        <LanguageToggler />
       </div>
     </div>
   );
