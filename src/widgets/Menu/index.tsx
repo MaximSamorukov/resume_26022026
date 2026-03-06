@@ -1,4 +1,5 @@
 import { useActiveSection } from "@/utils/hooks/useActiveSection";
+import { motion } from "motion/react";
 import { MENU, PAGES } from "@/constants";
 import s from "./style.module.scss";
 import { MenuItem } from "@/components/Menu/MenuItem";
@@ -11,7 +12,12 @@ export const Menu = () => {
   const c = useTranslation();
   return (
     <div className={s.container}>
-      <div className={s.innerContainer}>
+      <motion.div
+        className={s.innerContainer}
+        initial={{ filter: "blur(10px)" }}
+        animate={{ filter: "blur(0px)" }}
+        transition={{ duration: 0.5 }}
+      >
         {MENU.map((i) => (
           <MenuItem
             key={i.slug}
@@ -22,7 +28,7 @@ export const Menu = () => {
           />
         ))}
         <LanguageToggler />
-      </div>
+      </motion.div>
     </div>
   );
 };

@@ -12,6 +12,7 @@
   "dependencies": {
     "@uidotdev/usehooks": "^2.4.1",
     "classnames": "^2.5.1",
+    "motion": "^12.35.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "sass": "^1.97.3"

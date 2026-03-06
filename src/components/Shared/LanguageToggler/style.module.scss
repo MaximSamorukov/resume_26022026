@@ -4,13 +4,14 @@
 $PADDING: 2px;
 $CONT_WIDTH: 42px;
 $CONT_HEIGHT: 26px;
+$BORDER: 1px;
 $POINTER_SIZE: $CONT_HEIGHT - $PADDING * 2;
 $TRANSLATE: $CONT_WIDTH - $PADDING - $CONT_HEIGHT;
 .container {
   width: fit-content;
   height: $CONT_HEIGHT;
   width: $CONT_WIDTH;
-  border: 1px solid $BASE_GREY;
+  background-color: rgba($BASE_GREY, 0.1);
   border-radius: math.div($CONT_HEIGHT, 2);
   box-sizing: border-box;
   display: flex;
@@ -27,12 +28,12 @@ $TRANSLATE: $CONT_WIDTH - $PADDING - $CONT_HEIGHT;
   width: $POINTER_SIZE;
   border-radius: 50%;
   box-sizing: border-box;
-  border: 1px solid $BASE_GREY;
+  background-color: $BASE_BACKGROUND;
   font-size: $FZ_12;
+  color: $BASE_GREY;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: $BASE_LIGHT;
   box-sizing: border-box;
 
   &__en {
@@ -42,5 +43,8 @@ $TRANSLATE: $CONT_WIDTH - $PADDING - $CONT_HEIGHT;
   &__ru {
     transform: translateX(0);
     transition: all 0.3s ease-in-out;
+  }
+  &:hover {
+    color: $BASE_LIGHT;
   }
 }

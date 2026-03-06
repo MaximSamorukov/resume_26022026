@@ -1,3 +1,4 @@
+import { motion } from "motion/react";
 import GitHubIcon from "@/assets/gh.svg?react";
 import EmailIcon from "@/assets/email.svg?react";
 import LinkedInIcon from "@/assets/ln.svg?react";
@@ -14,7 +15,11 @@ export const About = () => {
   if (less980px) {
     return (
       <div id={PAGES.ABOUT} className={s.container}>
-        <div className={s.data}>
+        <motion.div
+          initial={{ filter: "blur(10px)" }}
+          animate={{ filter: "blur(0px)" }}
+          className={s.data}
+        >
           <div className={s.data__brief}>
             <div className={s.data__title}>{c.t.about.brief.name}</div>
             <div className={s.data__occupation}>
@@ -72,13 +77,18 @@ export const About = () => {
             </div>
             <DownloadResumeBtn />
           </div>
-        </div>
+        </motion.div>
       </div>
     );
   }
   return (
     <div id={PAGES.ABOUT} className={s.container}>
-      <div className={s.data}>
+      <motion.div
+        initial={{ filter: "blur(10px)" }}
+        animate={{ filter: "blur(0px)" }}
+        transition={{ duration: 0.5 }}
+        className={s.data}
+      >
         <div className={s.data__brief}>
           <div className={s.data__title}>{c.t.about.brief.name}</div>
           <div className={s.data__occupation}>{c.t.about.brief.occupation}</div>
@@ -128,7 +138,7 @@ export const About = () => {
           <br />
           <span dangerouslySetInnerHTML={{ __html: c.t.about.summary.third }} />
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };
