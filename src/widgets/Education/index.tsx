@@ -10,8 +10,9 @@ export const Education = () => {
     <div id={PAGES.EDUCATION} className={s.container}>
       <div className={s.data}>
         <div className={s.data__title}>{c.t.pageTitle.education}</div>
-        {c.t.education.map((i) => (
+        {c.t.education.map((i, ind) => (
           <HighEducationItem
+            index={ind}
             key={i.speciality}
             name={i.name}
             specialty={i.speciality}
@@ -25,6 +26,7 @@ export const Education = () => {
         <div className={s.data__courses}>
           {c.t.courses.map((i, index) => (
             <CourseItem
+              index={index}
               key={`${i.name}_${index}`}
               name={i.name}
               school={i.school}

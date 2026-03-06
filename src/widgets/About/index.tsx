@@ -17,7 +17,8 @@ export const About = () => {
       <div id={PAGES.ABOUT} className={s.container}>
         <motion.div
           initial={{ filter: "blur(10px)" }}
-          animate={{ filter: "blur(0px)" }}
+          animate={{ filter: "none" }}
+          transition={{ duration: 0.5 }}
           className={s.data}
         >
           <div className={s.data__brief}>
@@ -85,7 +86,7 @@ export const About = () => {
     <div id={PAGES.ABOUT} className={s.container}>
       <motion.div
         initial={{ filter: "blur(10px)" }}
-        animate={{ filter: "blur(0px)" }}
+        whileInView={{ filter: "none" }}
         transition={{ duration: 0.5 }}
         className={s.data}
       >

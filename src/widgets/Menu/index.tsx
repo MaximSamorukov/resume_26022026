@@ -15,7 +15,7 @@ export const Menu = () => {
       <motion.div
         className={s.innerContainer}
         initial={{ filter: "blur(10px)" }}
-        animate={{ filter: "blur(0px)" }}
+        animate={{ filter: "none" }}
         transition={{ duration: 0.5 }}
       >
         {MENU.map((i) => (

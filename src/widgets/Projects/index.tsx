@@ -45,6 +45,7 @@ export const Projects = () => {
         <div className={s.data__items}>
           {[...project, ...widget].map((i, index) => (
             <ProjectItem
+              index={index}
               key={`${i.title}_${index}`}
               title={i.title}
               type={i.type}
@@ -64,6 +65,7 @@ export const Projects = () => {
         <div className={s.data__items}>
           {testTask.map((i, index) => (
             <ProjectItem
+              index={index}
               key={`${i.title}_${index}`}
               title={i.title}
               type={i.type}

@@ -1,3 +1,4 @@
+import { motion } from "motion/react";
 import { useTranslation } from "@/providers/translations";
 import resume from "@/assets/resume/Резюме_frontend_Саморуков.pdf";
 import s from "./style.module.scss";
@@ -7,7 +8,12 @@ export const Contacts = () => {
   const c = useTranslation();
   return (
     <div id={PAGES.CONTACTS} className={s.container}>
-      <div className={s.data}>
+      <motion.div
+        className={s.data}
+        initial={{ filter: "blur(10px)" }}
+        whileInView={{ filter: "none" }}
+        transition={{ duration: 1 }}
+      >
         <div className={s.data__title}>{c.t.pageTitle.contacts}</div>
         <div className={s.data__contacts}>
           <div className={s.data__contactItem}>
@@ -55,7 +61,7 @@ export const Contacts = () => {
             </a>
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

@@ -1,4 +1,5 @@
 import { useTranslation } from "@/providers/translations";
+import { motion } from "motion/react";
 import cn from "classnames";
 import s from "./style.module.scss";
 const lang: Record<string, string> = {
@@ -9,7 +10,7 @@ export const LanguageToggler = () => {
   const c = useTranslation();
   const toggle = () => c.toggleLanguage();
   return (
-    <div className={s.container}>
+    <motion.div layout className={s.container}>
       <button
         onClick={toggle}
         className={cn(s.pointer, {
@@ -19,6 +20,6 @@ export const LanguageToggler = () => {
       >
         {lang[c.language]}
       </button>
-    </div>
+    </motion.div>
   );
 };
