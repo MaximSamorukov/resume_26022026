@@ -22,7 +22,7 @@ export const t = {
       brief: {
         name: "Maksim Samorukov",
         occupation: "frontend developer",
-        moto: "I build intuitive UI/UX",
+        moto: "I build intuitive UX/UI",
       },
       summary: {
         first:
