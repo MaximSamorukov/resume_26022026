@@ -3,10 +3,10 @@ import { checkClientData } from "../checkIp";
 import { useTranslation } from "@/providers/translations";
 
 type Response = {
-  id: string | null;
+  ip: string | null;
   city: string | null;
   country_name: string | null;
-  languages: string[];
+  languages: string | null;
 };
 
 export const useCheckClientData = () => {
@@ -16,7 +16,7 @@ export const useCheckClientData = () => {
     checkClientData().then((d) => {
       setData(d);
       const { languages } = d;
-      if (!languages.length || languages.includes("ru-RU")) {
+      if ((languages || "").includes("ru-RU")) {
         c.setCurrentLanguage("ru");
       } else {
         c.setCurrentLanguage("en");
