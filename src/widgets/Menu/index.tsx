@@ -5,11 +5,13 @@ import s from "./style.module.scss";
 import { MenuItem } from "@/components/Menu/MenuItem";
 import { useTranslation } from "@/providers/translations";
 import { LanguageToggler } from "@/components/Shared/LanguageToggler";
+import { useCheckClientData } from "@/utils/hooks/useCheckClientData";
 const pages = Object.values(PAGES);
 
 export const Menu = () => {
   const { setActivePage, activeId } = useActiveSection(pages);
   const c = useTranslation();
+  useCheckClientData();
   return (
     <div className={s.container}>
       <motion.div

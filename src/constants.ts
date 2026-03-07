@@ -59,3 +59,5 @@ export const PROJECTS = {
   github: "github",
   deploy: "deploy",
 };
+
+export const CHECK_IP_URL = "https://ipapi.co/json/";
