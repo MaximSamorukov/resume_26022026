@@ -6,7 +6,7 @@ type Response = {
   country_name: string | null;
   languages: string | null;
 };
-const SERVER_URL = "https://check-client-app.vercel.app/api"; // "http://localhost:3000/api";
+const SERVER_URL = "https://check-client-app.vercel.app/api/resume"; // "http://localhost:3000/api/resume";
 export const checkClientData = async (): Promise<Response> => {
   try {
     const response = await fetch(CHECK_IP_URL)
