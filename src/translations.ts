@@ -229,6 +229,14 @@ export const t = {
         stack: ["React", "AntD", "SASS", "Pixi.js", "axios"],
       },
       {
+        type: "project",
+        title: "Telegram bots development studio website",
+        description: "Telegram bots development studio website.",
+        github: "https://github.com/MaximSamorukov/tg_bots_site",
+        deploy: "https://tg-bots-site.vercel.app/",
+        stack: ["React", "SASS"],
+      },
+      {
         type: "testTask",
         title: "Page with historical facts",
         description: "Page with historical facts.",
@@ -317,7 +325,7 @@ export const t = {
       //  stack: ["TS", "React 19", "RxJS", "SASS"],
       //},
       {
-        type: "widget",
+        type: "testTask",
         title: "Plastic window cost calculator.",
         description: "Plastic window cost calculator.",
         github: "https://github.com/MaximSamorukov/window_calculator_mini_app",
@@ -578,6 +586,14 @@ export const t = {
         stack: ["React", "AntD", "SASS", "Pixi.js", "axios"],
       },
       {
+        type: "project",
+        title: "Сайт студии разработки Телеграм ботов",
+        description: "Сайт студии разработки Телеграм ботов.",
+        github: "https://github.com/MaximSamorukov/tg_bots_site",
+        deploy: "https://tg-bots-site.vercel.app/",
+        stack: ["React", "SASS"],
+      },
+      {
         type: "testTask",
         title: "Страница с историческими фактами.",
         description: "Страница с историческими фактами.",
@@ -666,7 +682,7 @@ export const t = {
       //  stack: ["TS", "React 19", "RxJS", "SASS"],
       //},
       {
-        type: "widget",
+        type: "testTask",
         title: "Калькулятор стоимости пластиковых окон",
         description: "Калькулятор стоимости пластиковых окон",
         github: "https://github.com/MaximSamorukov/window_calculator_mini_app",

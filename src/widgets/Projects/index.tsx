@@ -39,9 +39,7 @@ export const Projects = () => {
   return (
     <div id={PAGES.PROJECTS} className={s.container}>
       <div className={s.data}>
-        <div
-          className={s.data__title}
-        >{`${c.t.pageTitle.projects} и ${c.t.pageTitle.widgets}`}</div>
+        <div className={s.data__title}>{c.t.pageTitle.projects}</div>
         <div className={s.data__items}>
           {[...project, ...widget].map((i, index) => (
             <ProjectItem
@@ -58,7 +56,9 @@ export const Projects = () => {
         </div>
       </div>
       <div className={s.data}>
-        <div className={s.data__title}>{c.t.pageTitle.testTasks}</div>
+        <div
+          className={s.data__title}
+        >{`${c.t.pageTitle.testTasks} и ${c.t.pageTitle.widgets}`}</div>
         <div className={s.data__disclaimer}>
           {c.t.common.page.projects.testTasksDisclaimer}
         </div>
