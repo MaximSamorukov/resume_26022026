@@ -129,7 +129,7 @@ export const t = {
       {
         company: "Proitech, Ltd",
         active: true,
-        title: "Разработчик интерфейсов",
+        title: "React developer",
         start: "01.04.2026",
         end: "01.07.2026",
         description: [
