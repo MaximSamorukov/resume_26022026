@@ -28,7 +28,7 @@ export const t = {
         first:
           "Hi! I'm a <span class='accent'>frontend developer</span> with an engineering background.",
         second:
-          "I build modern web interfaces with <span class='accent'>React</span> and <span class='accent'>TypeScript</span>, develop <span class='accent'>fullstack applications</span> and <span class='accent'>Telegram bots</span>. Building my own SaaS product using AI to optimize welding technology development.",
+          "I build modern web and mobile interfaces with <span class='accent'>React</span>, <span class='accent'>React Native</span> and <span class='accent'>TypeScript</span>, develop <span class='accent'>fullstack</span> and <span class='accent'>mobile applications</span>, <span class='accent'>Telegram bots</span>. Building my own SaaS product using AI to optimize welding technology development.",
         third:
           "The combination of a PhD in materials science, an engineering background, and web development experience allows me to thoroughly understand the subject domain for <span class='accent'>effective problem-solving</span>.",
       },
@@ -127,6 +127,26 @@ export const t = {
     ],
     experience: [
       {
+        company: "Proitech, Ltd",
+        active: true,
+        title: "Разработчик интерфейсов",
+        start: "01.04.2026",
+        end: "01.07.2026",
+        description: [
+          "Development of React UI components and implementation of integration logic between the frontend and backend via REST API. Development of state management logic using a state manager. Maintenance and support of the frontend part of the application. Maintenance and support of a mobile application built with React Native.",
+        ],
+        stack: [
+          "TypeScript",
+          "React",
+          "React Native",
+          "Mobx",
+          "SCSS",
+          "Material UI",
+          "OpenLayers",
+          "Git",
+        ],
+      },
+      {
         company: "Program-Service, Ltd",
         active: true,
         title: "React developer",
@@ -139,6 +159,7 @@ export const t = {
           "Electron",
           "TypeScript",
           "React",
+          "React Native",
           "Redux",
           "SCSS",
           "AntD",
@@ -384,7 +405,7 @@ export const t = {
         first:
           "Привет! Я <span class='accent'>фронтенд-разработчик</span> с инженерным бэкграундом.",
         second:
-          "Создаю современные веб-интерфейсы на <span class='accent'>React</span> и <span class='accent'>TypeScript</span>, разрабатываю <span class='accent'>фуллстэк-приложения</span> и <span class='accent'>Telegram-ботов</span>. Развиваю собственный SaaS-продукт с использованием AI для оптимизации разработки технологий сварки.",
+          "Создаю современные веб-интерфейсы на <span class='accent'>React</span>, <span class='accent'>React Native</span> и <span class='accent'>TypeScript</span>, разрабатываю <span class='accent'>фуллстэк</span> и <span class='accent'>мобильные приложения</span>, <span class='accent'>Telegram-ботов</span>. Развиваю собственный SaaS-продукт с использованием AI для оптимизации разработки технологий сварки.",
         third:
           "Сочетание степени к.т.н. в материаловедении, инженерного бэкграунда и опыта в веб-разработке позволяет мне комплексно оценивать предметную область для <span class='accent'>эффективного решения задач</span>.",
       },
@@ -483,6 +504,26 @@ export const t = {
     ],
     experience: [
       {
+        company: "Информационные технологии, ООО",
+        active: true,
+        title: "Разработчик интерфейсов",
+        start: "01.04.2026",
+        end: "01.07.2026",
+        description: [
+          "Разработка React UI компонентов и написание логики интеграций интерфейсов и бэкенда по REST API. Разработка логики управления состоянием с использованием стейт-менеджера. Поддержка frontend части приложения. Поддержка мобильного приложения на React Native.",
+        ],
+        stack: [
+          "TypeScript",
+          "React",
+          "React Native",
+          "Mobx",
+          "SCSS",
+          "Material UI",
+          "OpenLayers",
+          "Git",
+        ],
+      },
+      {
         company: "Программ-Сервис, ООО",
         active: true,
         title: "Разработчик интерфейсов",
@@ -495,6 +536,7 @@ export const t = {
           "Electron",
           "TypeScript",
           "React",
+          "React Native",
           "Redux",
           "SCSS",
           "AntD",
