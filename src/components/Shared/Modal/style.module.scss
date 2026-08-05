@@ -1,0 +1,34 @@
+@use "../../../variables.scss" as *;
+
+.container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__closed {
+    background-color: none;
+    z-index: -1;
+  }
+  &__opened {
+    background-color: rgba($BASE_BACKGROUND_OPTION, 0.5);
+  }
+}
+
+.modalContainer {
+  position: relative;
+  width: 90%;
+  max-width: 700px;
+  height: 90%;
+  background-color: $BASE_BACKGROUND_OPTION;
+  border: 1px solid $BASE_BORDER;
+  border-radius: 20px;
+  padding: 20px;
+  overflow-y: scroll;
+  box-sizing: border-box;
+}
