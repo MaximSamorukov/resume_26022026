@@ -61,3 +61,4 @@ export const PROJECTS = {
 };
 
 export const CHECK_IP_URL = "https://ipapi.co/json/";
+export const MUTE = false;

@@ -1,4 +1,5 @@
-import { CHECK_IP_URL } from "@/constants";
+import { CHECK_IP_URL, MUTE } from "@/constants";
+import { isLocalhost } from "../checkLocalhost";
 
 type Response = {
   ip: string | null;
@@ -7,7 +8,15 @@ type Response = {
   languages: string | null;
 };
 const SERVER_URL = "https://check-client-app.vercel.app/api/resume"; // "http://localhost:3000/api/resume";
+const nullObject = {
+  ip: null,
+  city: null,
+  country_name: null,
+  languages: null,
+};
 export const checkClientData = async (): Promise<Response> => {
+  if (MUTE || isLocalhost()) return Promise.resolve(nullObject);
+
   try {
     const response = await fetch(CHECK_IP_URL)
       .then((d) => d.json())
@@ -16,23 +25,23 @@ export const checkClientData = async (): Promise<Response> => {
         fetch(SERVER_URL, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ ip, city, country_name, languages }),
+          body: JSON.stringify({
+            ...nullObject,
+            ip,
+            city,
+            country_name,
+            languages,
+          }),
         }).catch(console.error);
         return { ip, city, country_name, languages };
       });
     return response;
   } catch {
-    const errorObject = {
-      ip: null,
-      city: null,
-      country_name: null,
-      languages: null,
-    };
     fetch(SERVER_URL, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(errorObject),
+      body: JSON.stringify(nullObject),
     }).catch(console.error);
-    return errorObject;
+    return nullObject;
   }
 };
