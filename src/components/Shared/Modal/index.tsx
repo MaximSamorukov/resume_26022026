@@ -18,6 +18,7 @@ export const Modal: React.FC<ModalPropsType> = ({
   const onClose = useCallback(
     (e: MouseEvent<HTMLDivElement>) => {
       if ((e.target as HTMLDivElement).id === id) {
+        e.stopPropagation();
         onCloseModal();
       }
     },

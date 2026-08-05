@@ -8,6 +8,7 @@ import s from "./style.module.scss";
 import { PAGES } from "@/constants";
 import { useTranslation } from "@/providers/translations";
 import { DownloadResumeBtn } from "@/components/About/DownloadResumeBtn";
+import { WelcomeVideoBtn } from "@/components/About/WelcomeVideo";
 
 export const About = () => {
   const c = useTranslation();
@@ -77,6 +78,7 @@ export const About = () => {
               </a>
             </div>
             <DownloadResumeBtn />
+            <WelcomeVideoBtn />
           </div>
         </motion.div>
       </div>
@@ -127,6 +129,7 @@ export const About = () => {
             </a>
           </div>
           <DownloadResumeBtn />
+          <WelcomeVideoBtn />
         </div>
         <div className={s.data__summary}>
           <span dangerouslySetInnerHTML={{ __html: c.t.about.summary.first }} />
