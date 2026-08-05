@@ -24,7 +24,7 @@ export const WelcomeVideoBtn: React.FC<WelcomeVideoBtnProps> = memo(
     const [videoTagWidthValue, setVideoTagWidthValue] = useState(0);
     const [showVideo, setShowVideo] = useState<boolean>(false);
     const islocalhost = useMemo(() => isLocalhost(), [window.location]);
-
+    console.log(islocalhost);
     const withWelcomeVideo = useMemo(
       () => hasWelcomeVideoInUrl(),
       [window.location],
@@ -54,7 +54,7 @@ export const WelcomeVideoBtn: React.FC<WelcomeVideoBtnProps> = memo(
       setShowVideo(false);
     }, []);
     useEffect(() => {
-      if (islocalhost && withWelcomeVideo && isFirstRender) {
+      if (withWelcomeVideo && isFirstRender) {
         setShowVideo(true);
       }
     }, []);
@@ -68,9 +68,7 @@ export const WelcomeVideoBtn: React.FC<WelcomeVideoBtnProps> = memo(
         }
       }
     }, []);
-    if (!islocalhost) {
-      return <></>;
-    }
+
     return (
       <div onClick={onClick} className={s.container}>
         <PlayIcon />
@@ -83,7 +81,7 @@ export const WelcomeVideoBtn: React.FC<WelcomeVideoBtnProps> = memo(
             <video
               ref={videoRef}
               preload="auto"
-              src="/src/assets/welcome_video/2026-08-05 12-28-11.mkv"
+              src="/src/assets/welcome_video/2026-08-05 14-28-40.mkv"
               width={videoTagWidthValue}
             />
             <div className={s.videoContainer_constrols}>
