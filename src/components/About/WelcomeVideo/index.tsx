@@ -15,6 +15,7 @@ import { isLocalhost } from "@/utils/checkLocalhost";
 import { hasWelcomeVideoInUrl } from "@/utils/withWelcomeVideo";
 import { Modal } from "@/components/Shared/Modal";
 import { PlayBtn } from "../PlayBtn";
+import { checkClientData } from "@/utils/checkIp";
 
 type WelcomeVideoBtnProps = {
   isFirstRender: boolean;
@@ -36,6 +37,7 @@ export const WelcomeVideoBtn: React.FC<WelcomeVideoBtnProps> = memo(
         if (videoRef.current.paused) {
           videoRef.current.play();
           setIsPlaying(true);
+          checkClientData(true);
         } else {
           videoRef.current.pause();
           setIsPlaying(false);
@@ -67,6 +69,7 @@ export const WelcomeVideoBtn: React.FC<WelcomeVideoBtnProps> = memo(
     }, []);
     useEffect(() => {
       if (withWelcomeVideo && isFirstRender) {
+        checkClientData(true);
         setShowVideo(true);
       }
     }, []);
