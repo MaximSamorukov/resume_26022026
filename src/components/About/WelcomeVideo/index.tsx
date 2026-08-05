@@ -23,6 +23,7 @@ export const WelcomeVideoBtn: React.FC<WelcomeVideoBtnProps> = memo(
   ({ isFirstRender }) => {
     const videoRef = useRef<HTMLVideoElement>(null);
     const [videoTagWidthValue, setVideoTagWidthValue] = useState(0);
+    const [isPlaying, setIsPlaying] = useState<boolean>(false);
     const [showVideo, setShowVideo] = useState<boolean>(false);
     const islocalhost = useMemo(() => isLocalhost(), [window.location]);
     console.log(islocalhost);
@@ -30,7 +31,17 @@ export const WelcomeVideoBtn: React.FC<WelcomeVideoBtnProps> = memo(
       () => hasWelcomeVideoInUrl(),
       [window.location],
     );
-
+    const handlePlay = useCallback(() => {
+      if (videoRef.current) {
+        if (videoRef.current.paused) {
+          videoRef.current.play();
+          setIsPlaying(true);
+        } else {
+          videoRef.current.pause();
+          setIsPlaying(false);
+        }
+      }
+    }, []);
     const updateWidth = useCallback(() => {
       const div = document.querySelector("#welcome_video");
       if (div && showVideo) {
@@ -60,16 +71,6 @@ export const WelcomeVideoBtn: React.FC<WelcomeVideoBtnProps> = memo(
       }
     }, []);
 
-    const handlePlay = useCallback(() => {
-      if (videoRef.current) {
-        if (videoRef.current.paused) {
-          videoRef.current.play();
-        } else {
-          videoRef.current.pause();
-        }
-      }
-    }, []);
-
     return (
       <div onClick={onClick} className={s.container}>
         <PlayIcon />
@@ -78,7 +79,7 @@ export const WelcomeVideoBtn: React.FC<WelcomeVideoBtnProps> = memo(
           isOpened={showVideo}
           onCloseModal={onCloseModal}
         >
-          <div className={s.videoContainer}>
+          <div className={s.videoContainer} onClick={console.log}>
             <video
               ref={videoRef}
               preload="auto"
@@ -86,7 +87,7 @@ export const WelcomeVideoBtn: React.FC<WelcomeVideoBtnProps> = memo(
               width={videoTagWidthValue}
             />
             <div className={s.videoContainer_constrols}>
-              <PlayBtn onClick={handlePlay} />
+              <PlayBtn onClick={handlePlay} isPlaying={isPlaying} />
             </div>
           </div>
         </Modal>
