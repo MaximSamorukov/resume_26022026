@@ -9,10 +9,17 @@ import { PAGES } from "@/constants";
 import { useTranslation } from "@/providers/translations";
 import { DownloadResumeBtn } from "@/components/About/DownloadResumeBtn";
 import { WelcomeVideoBtn } from "@/components/About/WelcomeVideo";
+import { useEffect, useRef } from "react";
 
 export const About = () => {
   const c = useTranslation();
   const less980px = useMediaQuery("(max-width: 980px)");
+  const isFirstRender = useRef(true);
+
+  useEffect(() => {
+    isFirstRender.current = false;
+  }, []);
+
   if (less980px) {
     return (
       <div id={PAGES.ABOUT} className={s.container}>
@@ -78,7 +85,7 @@ export const About = () => {
               </a>
             </div>
             <DownloadResumeBtn />
-            <WelcomeVideoBtn />
+            <WelcomeVideoBtn isFirstRender={isFirstRender.current} />
           </div>
         </motion.div>
       </div>
@@ -129,7 +136,7 @@ export const About = () => {
             </a>
           </div>
           <DownloadResumeBtn />
-          <WelcomeVideoBtn />
+          <WelcomeVideoBtn isFirstRender={isFirstRender.current} />
         </div>
         <div className={s.data__summary}>
           <span dangerouslySetInnerHTML={{ __html: c.t.about.summary.first }} />
