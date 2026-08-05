@@ -70,7 +70,16 @@ export const WelcomeVideoBtn: React.FC<WelcomeVideoBtnProps> = memo(
         setShowVideo(true);
       }
     }, []);
-
+    const handleVideoSurfaceClick = useCallback(
+      (e: React.MouseEvent<HTMLDivElement>) => {
+        const tag = (e.target as HTMLElement).tagName;
+        if (tag === "VIDEO" || !!(e.target as HTMLElement).closest("video")) {
+          e.stopPropagation();
+          return;
+        }
+      },
+      [],
+    );
     return (
       <div onClick={onClick} className={s.container}>
         <PlayIcon />
@@ -79,7 +88,7 @@ export const WelcomeVideoBtn: React.FC<WelcomeVideoBtnProps> = memo(
           isOpened={showVideo}
           onCloseModal={onCloseModal}
         >
-          <div className={s.videoContainer} onClick={console.log}>
+          <div className={s.videoContainer} onClick={handleVideoSurfaceClick}>
             <video
               ref={videoRef}
               preload="auto"
