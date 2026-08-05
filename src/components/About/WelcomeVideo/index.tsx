@@ -9,7 +9,8 @@ import {
 } from "react";
 import s from "./style.module.scss";
 import PlayIcon from "@/assets/play.svg?react";
-
+// @ts-ignore
+import welcomeVideo from "@/assets/welcome_video/2026-08-05_14-28-40.mkv";
 import { isLocalhost } from "@/utils/checkLocalhost";
 import { hasWelcomeVideoInUrl } from "@/utils/withWelcomeVideo";
 import { Modal } from "@/components/Shared/Modal";
@@ -81,7 +82,7 @@ export const WelcomeVideoBtn: React.FC<WelcomeVideoBtnProps> = memo(
             <video
               ref={videoRef}
               preload="auto"
-              src="/src/assets/welcome_video/2026-08-05 14-28-40.mkv"
+              src={welcomeVideo}
               width={videoTagWidthValue}
             />
             <div className={s.videoContainer_constrols}>
