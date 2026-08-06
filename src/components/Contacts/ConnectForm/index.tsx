@@ -1,5 +1,6 @@
 import React, { useCallback } from "react";
 import s from "./style.module.scss";
+import { toast } from "react-toastify";
 import { InputItem } from "./InputItem";
 import { useTranslation } from "@/providers/translations";
 import {
@@ -27,8 +28,17 @@ export const ConnectForm: React.FC<ConnectFormPropsType> = ({
     formData.forEach((value, key) => {
       formObject[key] = value as string;
     });
-
-    sendNotificationOnRequest(formObject as NotificationData);
+    sendNotificationOnRequest(formObject as NotificationData)
+      .then((result) => {
+        if (result) {
+          toast.success("Запрос отправлен");
+        } else {
+          toast.error("Ошибка отправки");
+        }
+      })
+      .catch(() => {
+        toast.error("Ошибка отправки");
+      });
     e.currentTarget.reset();
   }, []);
   return (

@@ -7,6 +7,7 @@ import { Education } from "@/widgets/Education";
 import { Projects } from "@/widgets/Projects";
 import { AccentBox } from "./components/Shared/AccentBox";
 import { Background } from "./components/Shared/Background";
+import { Bounce, ToastContainer } from "react-toastify";
 
 export function App() {
   const less680px = useMediaQuery("(max-width: 680px)");
@@ -35,6 +36,15 @@ export function App() {
         bottom={"50px"}
         rotate={0}
         right={"40%"}
+      />
+      <ToastContainer
+        position="top-right"
+        autoClose={2000}
+        hideProgressBar
+        newestOnTop
+        theme="dark"
+        transition={Bounce}
+        limit={1}
       />
       <Background />
     </>
