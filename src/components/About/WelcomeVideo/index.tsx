@@ -10,7 +10,7 @@ import {
 import s from "./style.module.scss";
 import PlayIcon from "@/assets/play.svg?react";
 // @ts-ignore
-import welcomeVideo from "@/assets/welcome_video/2026-08-05_14-28-40.mkv";
+import welcomeVideo from "@/assets/welcome_video/welcome_video.mkv";
 import { isLocalhost } from "@/utils/checkLocalhost";
 import { hasWelcomeVideoInUrl } from "@/utils/withWelcomeVideo";
 import { Modal } from "@/components/Shared/Modal";
