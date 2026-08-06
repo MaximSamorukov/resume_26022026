@@ -28,6 +28,13 @@ export const ConnectForm: React.FC<ConnectFormPropsType> = ({
     formData.forEach((value, key) => {
       formObject[key] = value as string;
     });
+    if (
+      !(formObject.question || "").trim() ||
+      !(formObject.contact || "").trim()
+    ) {
+      toast.warning("Не заполнены необходимые поля");
+      return;
+    }
     sendNotificationOnRequest(formObject as NotificationData)
       .then((result) => {
         if (result) {
