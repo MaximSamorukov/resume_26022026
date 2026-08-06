@@ -1,4 +1,10 @@
-import { CHECK_IP_URL, MUTE, SERVER_URL, SERVER_VIDEO_URL } from "@/constants";
+import {
+  CHECK_IP_URL,
+  MUTE,
+  SERVER_URL,
+  SERVER_URL_NOTIFICATION,
+  SERVER_VIDEO_URL,
+} from "@/constants";
 import { isLocalhost } from "../checkLocalhost";
 
 type Response = {
@@ -44,5 +50,29 @@ export const checkClientData = async (
       body: JSON.stringify(nullObject),
     }).catch(console.error);
     return nullObject;
+  }
+};
+
+export type NotificationData = {
+  question: string;
+  contact: string;
+};
+export const sendNotificationOnRequest = async (
+  data: NotificationData,
+): Promise<boolean> => {
+  if (import.meta.env.DEV) {
+    return Promise.resolve(false);
+  }
+  const { question, contact } = data;
+  try {
+    fetch(SERVER_URL_NOTIFICATION, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ question, contact }),
+    }).catch(console.error);
+
+    return true;
+  } catch {
+    return false;
   }
 };

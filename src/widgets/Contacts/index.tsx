@@ -3,6 +3,7 @@ import { useTranslation } from "@/providers/translations";
 import resume from "@/assets/resume/Резюме_frontend_Саморуков.pdf";
 import s from "./style.module.scss";
 import { PAGES } from "@/constants";
+import { ConnectForm } from "@/components/Contacts/ConnectForm";
 
 export const Contacts = () => {
   const c = useTranslation();
@@ -60,6 +61,7 @@ export const Contacts = () => {
               {c.t.common.page.contacts.download}
             </a>
           </div>
+          <ConnectForm translateKey={PAGES.CONTACTS} />
         </div>
       </motion.div>
     </div>

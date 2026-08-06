@@ -12,6 +12,7 @@ $themes: (
     text-color: rgb(148, 163, 184),
     text-hovered: rgb(226, 232, 240),
     accent-color: rgb(94, 234, 212),
+    accent-color-hover: rgb(94, 234, 212),
   ),
 );
 
@@ -21,7 +22,7 @@ $BASE_ACCENT: map.get(map.get($themes, dark), accent-color);
 $BASE_BACKGROUND: map.get(map.get($themes, dark), bg-color);
 $BASE_BACKGROUND_OPTION: map.get(map.get($themes, dark), bg-color);
 $BASE_BORDER: map.get(map.get($themes, dark), text-color);
-
+$BASE_ACCENT_HOVER: map.get(map.get($themes, dark), accent-color-hover);
 $FZ_12: 12px;
 $FZ_14: 14px;
 $FZ_16: 16px;

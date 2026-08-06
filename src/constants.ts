@@ -59,9 +59,10 @@ export const PROJECTS = {
   github: "github",
   deploy: "deploy",
 };
-
+export const SERVER_URL_BOTS = "https://check-client-app.vercel.app/api/bots";
 export const CHECK_IP_URL = "https://ipapi.co/json/";
 export const MUTE = false;
 export const SERVER_URL = "https://check-client-app.vercel.app/api/resume"; // "http://localhost:3000/api/resume";
 export const SERVER_VIDEO_URL =
   "https://check-client-app.vercel.app/api/resume_video"; // "http://localhost:3000/api/resume";
+export const SERVER_URL_NOTIFICATION = `${SERVER_URL_BOTS}/notification`;
