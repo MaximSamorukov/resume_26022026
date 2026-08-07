@@ -16,4 +16,13 @@
     color: $BASE_LIGHT;
     border: 3px solid $BASE_LIGHT;
   }
+  &_disabled {
+    cursor: not-allowed;
+    border-color: rgba($BASE_GREY, 0.5);
+    color: rgba($BASE_GREY, 0.5);
+    &:hover {
+      color: rgba($BASE_LIGHT, 0.5);
+      border-color: rgba($BASE_LIGHT, 0.5);
+    }
+  }
 }

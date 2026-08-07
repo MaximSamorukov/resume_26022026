@@ -9,6 +9,7 @@ import {
 } from "react";
 import s from "./style.module.scss";
 import PlayIcon from "@/assets/play.svg?react";
+import Loader from "@/assets/loader.svg?react";
 // @ts-ignore
 import welcomeVideo from "@/assets/welcome_video/welcome_video.mkv";
 import { isLocalhost } from "@/utils/checkLocalhost";
@@ -16,18 +17,22 @@ import { hasWelcomeVideoInUrl } from "@/utils/withWelcomeVideo";
 import { Modal } from "@/components/Shared/Modal";
 import { PlayBtn } from "../PlayBtn";
 import { checkClientData } from "@/utils/checkIp";
+import { useVideo } from "./utils/useVideo";
 
 type WelcomeVideoBtnProps = {
   isFirstRender: boolean;
 };
 export const WelcomeVideoBtn: React.FC<WelcomeVideoBtnProps> = memo(
   ({ isFirstRender }) => {
-    const videoRef = useRef<HTMLVideoElement>(null);
+    const videoRef = useRef<HTMLVideoElement | null>(null);
+    const videoState = useVideo(videoRef);
+    const isPlaying = useMemo(() => videoState.isPlaying, [videoState]);
+    const canPlay = useMemo(() => videoState.canPlay, [videoState]);
+    console.log(isPlaying);
     const [videoTagWidthValue, setVideoTagWidthValue] = useState(0);
-    const [isPlaying, setIsPlaying] = useState<boolean>(false);
     const [showVideo, setShowVideo] = useState<boolean>(false);
     const islocalhost = useMemo(() => isLocalhost(), [window.location]);
-    console.log(islocalhost);
+    //console.log(islocalhost);
     const withWelcomeVideo = useMemo(
       () => hasWelcomeVideoInUrl(),
       [window.location],
@@ -36,11 +41,9 @@ export const WelcomeVideoBtn: React.FC<WelcomeVideoBtnProps> = memo(
       if (videoRef.current) {
         if (videoRef.current.paused) {
           videoRef.current.play();
-          setIsPlaying(true);
           checkClientData(true);
         } else {
           videoRef.current.pause();
-          setIsPlaying(false);
         }
       }
     }, []);
@@ -92,14 +95,25 @@ export const WelcomeVideoBtn: React.FC<WelcomeVideoBtnProps> = memo(
           onCloseModal={onCloseModal}
         >
           <div className={s.videoContainer} onClick={handleVideoSurfaceClick}>
-            <video
-              ref={videoRef}
-              preload="auto"
-              src={welcomeVideo}
-              width={videoTagWidthValue}
-            />
+            <div className={s.videoContainer_wrapper}>
+              {!canPlay && (
+                <div className={s.loader}>
+                  <Loader />
+                </div>
+              )}
+              <video
+                ref={videoRef}
+                preload="auto"
+                src={welcomeVideo}
+                width={videoTagWidthValue}
+              />
+            </div>
             <div className={s.videoContainer_constrols}>
-              <PlayBtn onClick={handlePlay} isPlaying={isPlaying} />
+              <PlayBtn
+                onClick={handlePlay}
+                isPlaying={isPlaying}
+                disabled={!canPlay}
+              />
             </div>
           </div>
         </Modal>
