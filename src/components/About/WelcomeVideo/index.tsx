@@ -32,7 +32,7 @@ export const WelcomeVideoBtn: React.FC<WelcomeVideoBtnProps> = memo(
     const [videoTagWidthValue, setVideoTagWidthValue] = useState(0);
     const [showVideo, setShowVideo] = useState<boolean>(false);
     const islocalhost = useMemo(() => isLocalhost(), [window.location]);
-    //console.log(islocalhost);
+    console.log(islocalhost);
     const withWelcomeVideo = useMemo(
       () => hasWelcomeVideoInUrl(),
       [window.location],
