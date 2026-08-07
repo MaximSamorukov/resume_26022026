@@ -19,35 +19,38 @@ export const ConnectForm: React.FC<ConnectFormPropsType> = ({
   const l = c.t[translateKey as keyof typeof c.t];
   const {
     // @ts-ignore
-    form: { title, subtitle, question, contact, submit },
+    form: { title, subtitle, question, contact, submit, request },
   } = l;
-  const onSubmit = useCallback((e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    const formData = new FormData(e.currentTarget);
-    const formObject: Record<string, string> = {};
-    formData.forEach((value, key) => {
-      formObject[key] = value as string;
-    });
-    if (
-      !(formObject.question || "").trim() ||
-      !(formObject.contact || "").trim()
-    ) {
-      toast.warning("Не заполнены необходимые поля");
-      return;
-    }
-    sendNotificationOnRequest(formObject as NotificationData)
-      .then((result) => {
-        if (result) {
-          toast.success("Запрос отправлен");
-        } else {
-          toast.error("Ошибка отправки");
-        }
-      })
-      .catch(() => {
-        toast.error("Ошибка отправки");
+  const onSubmit = useCallback(
+    (e: React.FormEvent<HTMLFormElement>) => {
+      e.preventDefault();
+      const formData = new FormData(e.currentTarget);
+      const formObject: Record<string, string> = {};
+      formData.forEach((value, key) => {
+        formObject[key] = value as string;
       });
-    e.currentTarget.reset();
-  }, []);
+      if (
+        !(formObject.question || "").trim() ||
+        !(formObject.contact || "").trim()
+      ) {
+        toast.warning(request.incompleteFields);
+        return;
+      }
+      sendNotificationOnRequest(formObject as NotificationData)
+        .then((result) => {
+          if (result) {
+            toast.success(request.success);
+          } else {
+            toast.error(request.error);
+          }
+        })
+        .catch(() => {
+          toast.error(request.error);
+        });
+      e.currentTarget.reset();
+    },
+    [request],
+  );
   return (
     <form onSubmit={onSubmit}>
       <div className={s.container}>

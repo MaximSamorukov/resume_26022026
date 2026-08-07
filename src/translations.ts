@@ -378,6 +378,11 @@ export const t = {
         submit: {
           label: "Submit request",
         },
+        request: {
+          success: "Request sent",
+          error: "Error sending request",
+          incompleteFields: "Form fields input incomplete",
+        },
       },
     },
     common: {
@@ -772,6 +777,11 @@ export const t = {
         },
         submit: {
           label: "Отправить",
+        },
+        request: {
+          success: "Запрос отправлен",
+          error: "Ошибка отправки",
+          incompleteFields: "Не заполнены необходимые поля",
         },
       },
     },
