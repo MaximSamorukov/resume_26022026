@@ -8,7 +8,7 @@ import s from "./style.module.scss";
 import { PAGES } from "@/constants";
 import { useTranslation } from "@/providers/translations";
 import { DownloadResumeBtn } from "@/components/About/DownloadResumeBtn";
-import { WelcomeVideoBtn } from "@/components/About/WelcomeVideo";
+//import { WelcomeVideoBtn } from "@/components/About/WelcomeVideo";
 import { useEffect, useRef } from "react";
 
 export const About = () => {
@@ -85,7 +85,7 @@ export const About = () => {
               </a>
             </div>
             <DownloadResumeBtn />
-            <WelcomeVideoBtn isFirstRender={isFirstRender.current} />
+            {/*<WelcomeVideoBtn isFirstRender={isFirstRender.current} />*/}
           </div>
         </motion.div>
       </div>
@@ -136,7 +136,7 @@ export const About = () => {
             </a>
           </div>
           <DownloadResumeBtn />
-          <WelcomeVideoBtn isFirstRender={isFirstRender.current} />
+          {/*<WelcomeVideoBtn isFirstRender={isFirstRender.current} />*/}
         </div>
         <div className={s.data__summary}>
           <span dangerouslySetInnerHTML={{ __html: c.t.about.summary.first }} />

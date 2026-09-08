@@ -21,14 +21,14 @@ export const t = {
     about: {
       brief: {
         name: "Maksim Samorukov",
-        occupation: "frontend developer",
-        moto: "I build intuitive UX/UI",
+        occupation: "web developer",
+        moto: "I build user-friendly applications",
       },
       summary: {
         first:
-          "Hi! I'm a <span class='accent'>frontend developer</span> with an engineering background.",
+          "Hi! I'm a <span class='accent'>web developer</span> with an engineering background.",
         second:
-          "I build modern web and mobile interfaces with <span class='accent'>React</span>, <span class='accent'>React Native</span> and <span class='accent'>TypeScript</span>, develop <span class='accent'>fullstack</span> and <span class='accent'>mobile applications</span>, <span class='accent'>Telegram bots</span>. Building my own SaaS product using AI to optimize welding technology development.",
+          "I build modern web and mobile interfaces with <span class='accent'>React</span>, <span class='accent'>React Native</span> and <span class='accent'>TypeScript</span>, develop <span class='accent'>fullstack</span> and <span class='accent'>mobile applications</span>, <span class='accent'>Telegram bots</span>, build landing pages and multi-page websites using <span class='accent'>Tilda</span> and the <span class='accent'>WordPress CMS</span>. Building my own SaaS product using AI to optimize welding technology development.",
         third:
           "The combination of a PhD in materials science, an engineering background, and web development experience allows me to thoroughly understand the subject domain for <span class='accent'>effective problem-solving</span>.",
       },
@@ -124,8 +124,36 @@ export const t = {
         type: "stepik.svg",
         description: ["Frontend React Job Interview preparation"],
       },
+      {
+        valid: true,
+        name: "Python for beginners",
+        school: "Stepik",
+        type: "stepik.svg",
+        description: ["The basics of Python."],
+      },
     ],
     experience: [
+      {
+        company: "Freelance",
+        active: true,
+        title: "Web Developer",
+        start: "01.07.2025",
+        end: "present",
+        description: [
+          "Development of landing pages, multi-page websites, and mobile applications; SEO configuration; and Telegram bot development.",
+        ],
+        stack: [
+          "Tilda",
+          "WordPress",
+          "PHP",
+          "TypeScript",
+          "JavaScript",
+          "React",
+          "React Native",
+          "Tilda",
+          "WordPress",
+        ],
+      },
       {
         company: "Proitech, Ltd",
         active: true,
@@ -420,14 +448,14 @@ export const t = {
     about: {
       brief: {
         name: "Максим Саморуков",
-        occupation: "фронтенд-разработчик",
-        moto: "строю удобный UX/UI",
+        occupation: "веб разработчик",
+        moto: "строю удобный приложения",
       },
       summary: {
         first:
           "Привет! Я <span class='accent'>фронтенд-разработчик</span> с инженерным бэкграундом.",
         second:
-          "Создаю современные веб-интерфейсы на <span class='accent'>React</span>, <span class='accent'>React Native</span> и <span class='accent'>TypeScript</span>, разрабатываю <span class='accent'>фуллстэк</span> и <span class='accent'>мобильные приложения</span>, <span class='accent'>Telegram-ботов</span>. Развиваю собственный SaaS-продукт с использованием AI для оптимизации разработки технологий сварки.",
+          "Создаю современные веб-интерфейсы на <span class='accent'>React</span>, <span class='accent'>React Native</span> и <span class='accent'>TypeScript</span>, разрабатываю <span class='accent'>фуллстэк</span> и <span class='accent'>мобильные приложения</span>, <span class='accent'>Telegram-ботов</span>, создаю лендинги и мультистраничные вебсайты на <span class='accent'>Tilda</span> и <span class='accent'>WordPress</span>. Развиваю собственный SaaS-продукт с использованием AI для оптимизации разработки технологий сварки.",
         third:
           "Сочетание степени к.т.н. в материаловедении, инженерного бэкграунда и опыта в веб-разработке позволяет мне комплексно оценивать предметную область для <span class='accent'>эффективного решения задач</span>.",
       },
@@ -523,8 +551,36 @@ export const t = {
         type: "stepik.svg",
         description: ["Frontend React Job Interview preparation"],
       },
+      {
+        valid: true,
+        name: "Python for beginners",
+        school: "Stepik",
+        type: "stepik.svg",
+        description: ["The basics of Python."],
+      },
     ],
     experience: [
+      {
+        company: "Фриланс",
+        active: true,
+        title: "Веб разработчик",
+        start: "01.07.2025",
+        end: "present",
+        description: [
+          "Разработка лендингов, мультистраничных сайтов, мобильных приложений, настройка SEO параметров, разработка Telegram ботов.",
+        ],
+        stack: [
+          "Tilda",
+          "WordPress",
+          "PHP",
+          "TypeScript",
+          "JavaScript",
+          "React",
+          "React Native",
+          "Tilda",
+          "WordPress",
+        ],
+      },
       {
         company: "Информационные технологии, ООО",
         active: true,

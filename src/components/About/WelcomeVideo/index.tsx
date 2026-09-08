@@ -39,10 +39,10 @@ export const WelcomeVideoBtn: React.FC<WelcomeVideoBtnProps> = memo(
     const handlePlay = useCallback(() => {
       if (videoRef.current) {
         if (videoRef.current.paused) {
-          videoRef.current.play();
+          //videoRef.current.play();
           checkClientData(true);
         } else {
-          videoRef.current.pause();
+          //videoRef.current.pause();
         }
       }
     }, []);
