@@ -57,7 +57,11 @@ export const Contacts = () => {
           </div>
           <div className={s.data__contactItem}>
             <span>Resume:</span>
-            <a href={resume} download="Резюме_frontend_Саморуков.pdf">
+            <a
+              id="resume_download_contact_page"
+              href={resume}
+              download="Резюме_frontend_Саморуков.pdf"
+            >
               {c.t.common.page.contacts.download}
             </a>
           </div>
