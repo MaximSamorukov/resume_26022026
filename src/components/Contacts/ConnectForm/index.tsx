@@ -52,7 +52,7 @@ export const ConnectForm: React.FC<ConnectFormPropsType> = ({
     [request],
   );
   return (
-    <form onSubmit={onSubmit}>
+    <form id="connect_form_id" onSubmit={onSubmit}>
       <div className={s.container}>
         <div className={s.container__title}>{title}</div>
         <div className={s.container__subtitle}>{subtitle}</div>
