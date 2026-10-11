@@ -39,6 +39,9 @@ export const ConnectForm: React.FC<ConnectFormPropsType> = ({
       sendNotificationOnRequest(formObject as NotificationData)
         .then((result) => {
           if (result) {
+            (window as any).dataLayer.push({
+              event: "form_submit_success",
+            });
             toast.success(request.success);
           } else {
             toast.error(request.error);
