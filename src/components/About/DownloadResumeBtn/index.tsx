@@ -2,7 +2,7 @@ import { memo } from "react";
 import resume from "@/assets/resume/Резюме_frontend_Саморуков.pdf";
 import s from "./style.module.scss";
 import { useTranslation } from "@/providers/translations";
-export const DownloadResumeBtn = memo(() => {
+export const DownloadResumeBtn = memo(({ id }: { id: string }) => {
   const c = useTranslation();
 
   const onClick = () => {
@@ -12,7 +12,7 @@ export const DownloadResumeBtn = memo(() => {
     atag.click();
   };
   return (
-    <div onClick={onClick} className={s.container}>
+    <div id={id} onClick={onClick} className={s.container}>
       Resume
     </div>
   );

@@ -84,7 +84,7 @@ export const About = () => {
                 <TelegramIcon />
               </a>
             </div>
-            <DownloadResumeBtn />
+            <DownloadResumeBtn id="resume_download_about_page_mobile" />
             {/*<WelcomeVideoBtn isFirstRender={isFirstRender.current} />*/}
           </div>
         </motion.div>
@@ -135,7 +135,7 @@ export const About = () => {
               <TelegramIcon />
             </a>
           </div>
-          <DownloadResumeBtn />
+          <DownloadResumeBtn id="resume_download_about_page_desktop" />
           {/*<WelcomeVideoBtn isFirstRender={isFirstRender.current} />*/}
         </div>
         <div className={s.data__summary}>
