@@ -22,7 +22,7 @@ export const t = {
       brief: {
         name: "Maksim Samorukov",
         occupation: "web developer",
-        moto: "I build user-friendly applications",
+        moto: "I build user-friendly interfaces",
       },
       summary: {
         first:
@@ -449,7 +449,7 @@ export const t = {
       brief: {
         name: "Максим Саморуков",
         occupation: "веб разработчик",
-        moto: "строю удобный приложения",
+        moto: "строю удобные интерфейсы",
       },
       summary: {
         first:
